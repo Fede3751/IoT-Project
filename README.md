@@ -44,7 +44,7 @@ Your solution should go in:
 ```
 /src/iot_project_solution
 ```
-It includes some file already set for you.
+The package already includes some files set for you.
 
 
 Good luck!
