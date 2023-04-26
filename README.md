@@ -29,9 +29,22 @@ You can start the project just by running:
 This will automatically compile your solution package, source the environment, and launch the simulation.
 
 
+<br>
+A full simulation is composed of multiple executables:<br>
+-The Gazebo simulation.<br>
+-Mutiple ros_gz_bridge nodes which link the simulation to the ROS environment.<br>
+-A ROS Tester node which keeps track of the positions of the drones and stores information in order to compute a score.<br>
+-A ROS Grader node which displays in a window your current score (by using DearPyGui libraries for the graphics).<br>
+-Your ROS Solution, ideally composed of multiple ROS Drone Controller nodes, and one ROS Task Assigner node to give instruction to the drones.<br><br>
+
+
 
 Your solution should go in:
 
 ```
 /src/iot_project_solution
 ```
+It includes some file already set for you.
+
+
+Good luck!
