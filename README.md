@@ -1,6 +1,6 @@
 # IoT-Project
 
-![](https://fede3751.github.io/IoT_lectures/imgs/lecture_6/x3_swarming.gif)
+![Alt Text](https://fede3751.github.io/IoT_lectures/imgs/lecture_6/x3_swarming.gif)
 
 Repository for the IoT project.
 
