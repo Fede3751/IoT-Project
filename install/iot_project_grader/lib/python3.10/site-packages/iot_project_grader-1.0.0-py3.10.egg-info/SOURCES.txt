@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/iot_project_grader/iot_project_grader.egg-info/PKG-INFO
+../../build/iot_project_grader/iot_project_grader.egg-info/SOURCES.txt
+../../build/iot_project_grader/iot_project_grader.egg-info/dependency_links.txt
+../../build/iot_project_grader/iot_project_grader.egg-info/entry_points.txt
+../../build/iot_project_grader/iot_project_grader.egg-info/requires.txt
+../../build/iot_project_grader/iot_project_grader.egg-info/top_level.txt
+../../build/iot_project_grader/iot_project_grader.egg-info/zip-safe
+iot_project_grader/__init__.py
+iot_project_grader/grade_display.py
+resource/iot_project_grader
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

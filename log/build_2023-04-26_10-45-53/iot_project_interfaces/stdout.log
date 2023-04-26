@@ -1,0 +1,344 @@
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+-- Found geometry_msgs: 4.2.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") 
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found PythonExtra: .so  
+-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_interfaces
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  3%] Built target ament_cmake_python_copy_iot_project_interfaces
+running egg_info
+creating iot_project_interfaces.egg-info
+writing iot_project_interfaces.egg-info/PKG-INFO
+writing dependency_links to iot_project_interfaces.egg-info/dependency_links.txt
+writing top-level names to iot_project_interfaces.egg-info/top_level.txt
+writing manifest file 'iot_project_interfaces.egg-info/SOURCES.txt'
+reading manifest file 'iot_project_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'iot_project_interfaces.egg-info/SOURCES.txt'
+[  3%] Built target ament_cmake_python_build_iot_project_interfaces_egg
+[  3%] Built target iot_project_interfaces__cpp
+[  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 10%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_c.dir/rosidl_generator_c/iot_project_interfaces/msg/detail/target_positions__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_c.dir/rosidl_generator_c/iot_project_interfaces/srv/detail/color_target__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_c.dir/rosidl_generator_c/iot_project_interfaces/srv/detail/target_manager_interface__functions.c.o[0m
+[ 16%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_c.dir/rosidl_generator_c/iot_project_interfaces/action/detail/patrolling_action__functions.c.o[0m
+[ 18%] [32m[1mLinking C shared library libiot_project_interfaces__rosidl_generator_c.so[0m
+[ 18%] Built target iot_project_interfaces__rosidl_generator_c
+[ 20%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 21%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iot_project_interfaces/msg/target_positions__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iot_project_interfaces/srv/target_manager_interface__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iot_project_interfaces/srv/color_target__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iot_project_interfaces/action/patrolling_action__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iot_project_interfaces/action/detail/patrolling_action__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iot_project_interfaces/msg/detail/target_positions__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iot_project_interfaces/srv/detail/target_manager_interface__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iot_project_interfaces/srv/detail/color_target__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iot_project_interfaces/msg/detail/dds_fastrtps/target_positions__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iot_project_interfaces/srv/detail/dds_fastrtps/target_manager_interface__type_support.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iot_project_interfaces/action/detail/dds_fastrtps/patrolling_action__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iot_project_interfaces/srv/detail/dds_fastrtps/color_target__type_support.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/iot_project_interfaces/msg/target_positions__type_support.cpp.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/iot_project_interfaces/action/patrolling_action__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/iot_project_interfaces/srv/target_manager_interface__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/iot_project_interfaces/srv/color_target__type_support.cpp.o[0m
+[ 54%] [32m[1mLinking CXX shared library libiot_project_interfaces__rosidl_typesupport_c.so[0m
+[ 56%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iot_project_interfaces/msg/detail/target_positions__type_support.c.o[0m
+[ 60%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iot_project_interfaces/action/detail/patrolling_action__type_support.c.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iot_project_interfaces/srv/detail/color_target__type_support.c.o[0m
+[ 61%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iot_project_interfaces/srv/detail/target_manager_interface__type_support.c.o[0m
+[ 61%] Built target iot_project_interfaces__rosidl_typesupport_c
+[ 65%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iot_project_interfaces/srv/detail/target_manager_interface__type_support_c.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iot_project_interfaces/srv/detail/color_target__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iot_project_interfaces/msg/detail/target_positions__type_support_c.cpp.o[0m
+[ 69%] [32m[1mLinking C shared library libiot_project_interfaces__rosidl_typesupport_introspection_c.so[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iot_project_interfaces/action/detail/patrolling_action__type_support_c.cpp.o[0m
+[ 70%] Built target iot_project_interfaces__rosidl_typesupport_introspection_c
+[ 72%] [32m[1mLinking CXX shared library libiot_project_interfaces__rosidl_typesupport_cpp.so[0m
+[ 72%] Built target iot_project_interfaces__rosidl_typesupport_cpp
+[ 74%] [32m[1mLinking CXX shared library libiot_project_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[ 76%] [32m[1mLinking CXX shared library libiot_project_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 76%] Built target iot_project_interfaces__rosidl_typesupport_introspection_cpp
+[ 76%] Built target iot_project_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 78%] [32m[1mLinking CXX shared library libiot_project_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[ 78%] Built target iot_project_interfaces__rosidl_typesupport_fastrtps_c
+[ 78%] Built target iot_project_interfaces
+[ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 80%] Built target iot_project_interfaces__py
+[ 81%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_py.dir/rosidl_generator_py/iot_project_interfaces/msg/_target_positions_s.c.o[0m
+[ 83%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_py.dir/rosidl_generator_py/iot_project_interfaces/srv/_target_manager_interface_s.c.o[0m
+[ 85%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_py.dir/rosidl_generator_py/iot_project_interfaces/srv/_color_target_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_generator_py.dir/rosidl_generator_py/iot_project_interfaces/action/_patrolling_action_s.c.o[0m
+[ 89%] [32m[1mLinking C shared library rosidl_generator_py/iot_project_interfaces/libiot_project_interfaces__rosidl_generator_py.so[0m
+[ 89%] Built target iot_project_interfaces__rosidl_generator_py
+[ 90%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/iot_project_interfaces/_iot_project_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/iot_project_interfaces/_iot_project_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/iot_project_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/iot_project_interfaces/_iot_project_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target iot_project_interfaces__rosidl_typesupport_c__pyext
+[100%] Built target iot_project_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target iot_project_interfaces__rosidl_typesupport_introspection_c__pyext
+-- Install configuration: ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/ament_index/resource_index/rosidl_interfaces/iot_project_interfaces
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__type_support.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__functions.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__struct.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__functions.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/patrolling_action.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__type_support.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__type_support.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__functions.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__functions.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__functions.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__struct.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__struct.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__functions.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/target_manager_interface.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/color_target.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__struct.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__functions.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__functions.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__type_support.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/target_positions.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/library_path.sh
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/library_path.dsv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_generator_c.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/patrolling_action.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__builder.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__traits.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__struct.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/color_target.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__struct.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__builder.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__traits.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__struct.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__builder.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__traits.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/target_manager_interface.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__traits.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__struct.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__builder.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/target_positions.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/dds_fastrtps
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/dds_fastrtps
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/dds_fastrtps
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__type_support.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__rosidl_typesupport_introspection_c.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__type_support.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__type_support.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__type_support.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__rosidl_typesupport_introspection_c.h
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_c.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/action/detail/patrolling_action__type_support.cpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__type_support.cpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/target_manager_interface__type_support.cpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/srv/detail/color_target__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg
+-- Up-to-date: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__type_support.cpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/include/iot_project_interfaces/iot_project_interfaces/msg/detail/target_positions__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/pythonpath.sh
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/pythonpath.dsv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces-1.0.0-py3.10.egg-info
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces-1.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces-1.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/__init__.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action/__init__.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action/_patrolling_action_s.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action/_patrolling_action.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/_iot_project_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/_iot_project_interfaces_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/_iot_project_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/_target_manager_interface_s.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/__init__.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/_target_manager_interface.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/_color_target.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/_color_target_s.c
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/libiot_project_interfaces__rosidl_generator_py.so
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg/__init__.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg/_target_positions.py
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg/_target_positions_s.c
+Listing '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/__init__.py'...
+Listing '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action/__init__.py'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/action/_patrolling_action.py'...
+Listing '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg/__init__.py'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/msg/_target_positions.py'...
+Listing '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/__init__.py'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/_color_target.py'...
+Compiling '/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/srv/_target_manager_interface.py'...
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/local/lib/python3.10/dist-packages/iot_project_interfaces/iot_project_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_generator_py.so
+-- Set runtime path of "/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/lib/libiot_project_interfaces__rosidl_generator_py.so" to ""
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/msg/TargetPositions.idl
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/TargetManagerInterface.idl
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/ColorTarget.idl
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/action/PatrollingAction.idl
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/msg/TargetPositions.msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/TargetManagerInterface.srv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/TargetManagerInterface_Request.msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/TargetManagerInterface_Response.msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/ColorTarget.srv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/ColorTarget_Request.msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/srv/ColorTarget_Response.msg
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/action/PatrollingAction.action
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/ament_index/resource_index/package_run_dependencies/iot_project_interfaces
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/ament_index/resource_index/parent_prefix_path/iot_project_interfaces
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/ament_prefix_path.sh
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/ament_prefix_path.dsv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/path.sh
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/environment/path.dsv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/local_setup.bash
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/local_setup.sh
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/local_setup.zsh
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/local_setup.dsv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/package.dsv
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/ament_index/resource_index/packages/iot_project_interfaces
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/export_iot_project_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfacesConfig.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/cmake/iot_project_interfacesConfig-version.cmake
+-- Installing: /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_interfaces/share/iot_project_interfaces/package.xml

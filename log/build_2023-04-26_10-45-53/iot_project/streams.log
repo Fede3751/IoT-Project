@@ -1,0 +1,35 @@
+[0.944s] Invoking command in '/home/fede3751/Documents/git_repositories/IoT-Project/src/iot_project': PYTHONPATH=/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/prefix_override:/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/iot_project build --build-base /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build install --record /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/install.log --single-version-externally-managed
+[1.131s] running egg_info
+[1.131s] creating ../../build/iot_project/iot_project.egg-info
+[1.252s] writing ../../build/iot_project/iot_project.egg-info/PKG-INFO
+[1.252s] writing dependency_links to ../../build/iot_project/iot_project.egg-info/dependency_links.txt
+[1.252s] writing requirements to ../../build/iot_project/iot_project.egg-info/requires.txt
+[1.253s] writing top-level names to ../../build/iot_project/iot_project.egg-info/top_level.txt
+[1.253s] writing manifest file '../../build/iot_project/iot_project.egg-info/SOURCES.txt'
+[1.275s] reading manifest file '../../build/iot_project/iot_project.egg-info/SOURCES.txt'
+[1.276s] writing manifest file '../../build/iot_project/iot_project.egg-info/SOURCES.txt'
+[1.276s] running build
+[1.276s] running build_py
+[1.276s] creating /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build
+[1.276s] creating /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build/lib
+[1.276s] creating /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build/lib/iot_project
+[1.276s] copying iot_project/__init__.py -> /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build/lib/iot_project
+[1.276s] running install
+[1.276s] /home/fede3751/.local/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.276s]   warnings.warn(
+[1.280s] running install_lib
+[1.292s] creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/lib/python3.10/site-packages/iot_project
+[1.292s] copying /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build/lib/iot_project/__init__.py -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/lib/python3.10/site-packages/iot_project
+[1.292s] byte-compiling /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/lib/python3.10/site-packages/iot_project/__init__.py to __init__.cpython-310.pyc
+[1.292s] running install_data
+[1.303s] creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/share/ament_index
+[1.303s] creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/share/ament_index/resource_index
+[1.303s] creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/share/ament_index/resource_index/packages
+[1.303s] copying resource/iot_project -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/share/ament_index/resource_index/packages
+[1.303s] copying package.xml -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/share/iot_project
+[1.304s] copying launch/launch.py -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/share/iot_project
+[1.304s] running install_egg_info
+[1.315s] Copying ../../build/iot_project/iot_project.egg-info to /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/lib/python3.10/site-packages/iot_project-0.0.0-py3.10.egg-info
+[1.316s] running install_scripts
+[1.366s] writing list of installed files to '/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/install.log'
+[1.388s] Invoked command in '/home/fede3751/Documents/git_repositories/IoT-Project/src/iot_project' returned '0': PYTHONPATH=/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/prefix_override:/home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/iot_project build --build-base /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/build install --record /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project/install.log --single-version-externally-managed

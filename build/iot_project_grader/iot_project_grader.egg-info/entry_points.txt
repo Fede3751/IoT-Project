@@ -1,0 +1,2 @@
+[console_scripts]
+display = iot_project_grader.grade_display:main

@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from iot_project_interfaces/srv/TargetManagerInterface.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module iot_project_interfaces {
+  module srv {
+    struct TargetManagerInterface_Request {
+      sequence<geometry_msgs::msg::Point> targets;
+    };
+    struct TargetManagerInterface_Response {
+      sequence<geometry_msgs::msg::Point> targets;
+
+      sequence<double> last_visits;
+    };
+  };
+};

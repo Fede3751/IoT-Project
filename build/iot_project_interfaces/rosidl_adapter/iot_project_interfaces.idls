@@ -1,0 +1,4 @@
+/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_interfaces/rosidl_adapter/iot_project_interfaces:msg/TargetPositions.idl
+/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_interfaces/rosidl_adapter/iot_project_interfaces:srv/TargetManagerInterface.idl
+/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_interfaces/rosidl_adapter/iot_project_interfaces:srv/ColorTarget.idl
+/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_interfaces/rosidl_adapter/iot_project_interfaces:action/PatrollingAction.idl

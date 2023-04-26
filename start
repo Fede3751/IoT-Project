@@ -1,0 +1,5 @@
+#!/bin/bash
+
+colcon build --packages-select iot_project_solution
+source ./install/local_setup.bash
+ros2 launch iot_project launch.py

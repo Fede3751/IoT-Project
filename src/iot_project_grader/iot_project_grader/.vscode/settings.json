@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/fede3751/Documents/iot_project/install/launcher/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_tester/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_solution/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_interfaces/local/lib/python3.10/dist-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_grader/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/fede3751/Documents/iot_project/install/launcher/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_tester/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_solution/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_interfaces/local/lib/python3.10/dist-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project_grader/lib/python3.10/site-packages",
+        "/home/fede3751/Documents/iot_project/install/iot_project/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

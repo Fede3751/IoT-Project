@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/iot_project_tester/iot_project_tester.egg-info
+writing ../../build/iot_project_tester/iot_project_tester.egg-info/PKG-INFO
+writing dependency_links to ../../build/iot_project_tester/iot_project_tester.egg-info/dependency_links.txt
+writing entry points to ../../build/iot_project_tester/iot_project_tester.egg-info/entry_points.txt
+writing requirements to ../../build/iot_project_tester/iot_project_tester.egg-info/requires.txt
+writing top-level names to ../../build/iot_project_tester/iot_project_tester.egg-info/top_level.txt
+writing manifest file '../../build/iot_project_tester/iot_project_tester.egg-info/SOURCES.txt'
+reading manifest file '../../build/iot_project_tester/iot_project_tester.egg-info/SOURCES.txt'
+writing manifest file '../../build/iot_project_tester/iot_project_tester.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build
+creating /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build/lib
+creating /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build/lib/iot_project_tester
+copying iot_project_tester/__init__.py -> /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build/lib/iot_project_tester
+copying iot_project_tester/target_handler.py -> /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build/lib/iot_project_tester
+running install
+running install_lib
+creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/python3.10/site-packages/iot_project_tester
+copying /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build/lib/iot_project_tester/__init__.py -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/python3.10/site-packages/iot_project_tester
+copying /home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/build/lib/iot_project_tester/target_handler.py -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/python3.10/site-packages/iot_project_tester
+byte-compiling /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/python3.10/site-packages/iot_project_tester/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/python3.10/site-packages/iot_project_tester/target_handler.py to target_handler.cpython-310.pyc
+running install_data
+creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/share/ament_index
+creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/share/ament_index/resource_index
+creating /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/share/ament_index/resource_index/packages
+copying resource/iot_project_tester -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/share/ament_index/resource_index/packages
+copying package.xml -> /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/share/iot_project_tester
+running install_egg_info
+Copying ../../build/iot_project_tester/iot_project_tester.egg-info to /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/python3.10/site-packages/iot_project_tester-1.0.0-py3.10.egg-info
+running install_scripts
+Installing target_handler script to /home/fede3751/Documents/git_repositories/IoT-Project/install/iot_project_tester/lib/iot_project_tester
+writing list of installed files to '/home/fede3751/Documents/git_repositories/IoT-Project/build/iot_project_tester/install.log'

@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/fede3751/Documents/iot_project/install/iot_project_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/fede3751/Documents/iot_project/src/iot_project_interfaces/include/**",
+        "/home/fede3751/Documents/iot_project/src/ros_gz_sim_addons/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

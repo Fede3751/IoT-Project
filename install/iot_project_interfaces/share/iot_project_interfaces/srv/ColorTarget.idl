@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from iot_project_interfaces/srv/ColorTarget.srv
+// generated code does not contain a copyright notice
+
+
+module iot_project_interfaces {
+  module srv {
+    struct ColorTarget_Request {
+      string target;
+
+      int8 color_r;
+
+      int8 color_g;
+
+      int8 color_b;
+    };
+    struct ColorTarget_Response {
+      boolean result;
+    };
+  };
+};
