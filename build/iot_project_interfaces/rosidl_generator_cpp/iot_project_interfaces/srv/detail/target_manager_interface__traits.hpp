@@ -14,10 +14,6 @@
 #include "iot_project_interfaces/srv/detail/target_manager_interface__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
-// Include directives for member types
-// Member 'targets'
-#include "geometry_msgs/msg/detail/point__traits.hpp"
-
 namespace iot_project_interfaces
 {
 
@@ -28,48 +24,17 @@ inline void to_flow_style_yaml(
   const TargetManagerInterface_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: targets
-  {
-    if (msg.targets.size() == 0) {
-      out << "targets: []";
-    } else {
-      out << "targets: [";
-      size_t pending_items = msg.targets.size();
-      for (auto item : msg.targets) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const TargetManagerInterface_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: targets
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.targets.size() == 0) {
-      out << "targets: []\n";
-    } else {
-      out << "targets:\n";
-      for (auto item : msg.targets) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const TargetManagerInterface_Request & msg, bool use_flow_style = false)
@@ -118,11 +83,11 @@ inline const char * name<iot_project_interfaces::srv::TargetManagerInterface_Req
 
 template<>
 struct has_fixed_size<iot_project_interfaces::srv::TargetManagerInterface_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<iot_project_interfaces::srv::TargetManagerInterface_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<iot_project_interfaces::srv::TargetManagerInterface_Request>
@@ -132,8 +97,7 @@ struct is_message<iot_project_interfaces::srv::TargetManagerInterface_Request>
 
 // Include directives for member types
 // Member 'targets'
-// already included above
-// #include "geometry_msgs/msg/detail/point__traits.hpp"
+#include "geometry_msgs/msg/detail/point__traits.hpp"
 
 namespace iot_project_interfaces
 {
@@ -155,6 +119,24 @@ inline void to_flow_style_yaml(
       size_t pending_items = msg.targets.size();
       for (auto item : msg.targets) {
         to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: expiration_times
+  {
+    if (msg.expiration_times.size() == 0) {
+      out << "expiration_times: []";
+    } else {
+      out << "expiration_times: [";
+      size_t pending_items = msg.expiration_times.size();
+      for (auto item : msg.expiration_times) {
+        rosidl_generator_traits::value_to_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -202,6 +184,26 @@ inline void to_block_style_yaml(
         }
         out << "-\n";
         to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
+  }
+
+  // member: expiration_times
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.expiration_times.size() == 0) {
+      out << "expiration_times: []\n";
+    } else {
+      out << "expiration_times:\n";
+      for (auto item : msg.expiration_times) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
       }
     }
   }

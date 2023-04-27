@@ -26,9 +26,9 @@ class TargetHandler(Node):
         super().__init__('target_publisher')
         
         self.clock = 0
-        self.targets = []
         
-        self.targets_last_visit = [0.0]*5
+        self.targets = []
+
         self.drone_odometry_topics = []
 
         self.drone_positions = {}
@@ -37,12 +37,13 @@ class TargetHandler(Node):
         self.set_target_service = self.create_service(
             TargetManagerInterface,
             'task_assigner/set_targets',
-            self.set_targets)
+            self.set_targets
+        )
         
         self.get_target_service = self.create_service(
             TargetManagerInterface,
             'task_assigner/get_targets',
-            self.send_target_positions
+            self.get_targets
         )
 
 
@@ -59,11 +60,10 @@ class TargetHandler(Node):
             self.create_subscription(
                 Odometry,
                 drone+"/odometry",
-                lambda msg: self.register_drone_position(msg, drone), #self.register_drone_position,
+                lambda msg: self.register_drone_position(msg, drone),
                 10,
                 
             )
-
 
         self.get_logger().info("Target handler started. Positions are being published to /task_assigner/get_targets")
 
@@ -82,11 +82,11 @@ class TargetHandler(Node):
 
 
                     p0 = (self.drone_positions[d].x, self.drone_positions[d].y, self.drone_positions[d].z)
-                    p1 = (self.targets[t].x, self.targets[t].y, self.targets[t].z)
+                    p1 = (self.targets[t]["position"].x, self.targets[t]["position"].y, self.targets[t]["position"].z)
                     
                     if point_distance(p0, p1) < 1:
                         self.drones_last_visit[d] = t
-                        self.targets_last_visit[t] = float(self.clock)
+                        self.targets[t]["last_visit"] = float(self.clock)
 
             time.sleep(0.1)
 
@@ -97,11 +97,14 @@ class TargetHandler(Node):
     def store_time_callback(self, msg : Clock):
         self.clock = msg.clock.sec * 10**9 + msg.clock.nanosec
 
-    def send_target_positions(self, request : TargetManagerInterface.Request, response : TargetManagerInterface.Response):
+    def get_targets(self, request : TargetManagerInterface.Request, response : TargetManagerInterface.Response):
 
         response = TargetManagerInterface.Response()
-        response.targets = self.targets
-        response.last_visits = self.targets_last_visit
+
+        response.targets            = [target['position'] for target in self.targets]
+        response.last_visits        = [target['last_visit'] for target in self.targets]
+        response.expiration_times   = [target['expiration_time'] for target in self.targets]
+
 
         return response
         
@@ -119,21 +122,26 @@ class TargetHandler(Node):
 
         targets = []
 
-        for i in range(0, len(args), 3):
+        for i in range(0, len(args), 4):
             
             try:
                 targets.append(
-                    Point(
-                        x = float(args[i]),
-                        y = float(args[i+1]),
-                        z = float(args[i+2])
-                    )
+                    {
+                    "position"        : Point(
+                                            x = float(args[i]),
+                                            y = float(args[i+1]),
+                                            z = float(args[i+2]),
+                                        ),
+                    "expiration_time" : float(args[i+3]),
+                    "last_visit"      : 0.0
+                    }
                 )
 
             except:
                 break
 
         self.targets = targets
+        
 
 
 

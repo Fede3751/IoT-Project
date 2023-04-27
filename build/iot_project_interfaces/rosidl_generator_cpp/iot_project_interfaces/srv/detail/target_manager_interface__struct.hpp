@@ -15,10 +15,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'targets'
-#include "geometry_msgs/msg/detail/point__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__iot_project_interfaces__srv__TargetManagerInterface_Request __attribute__((deprecated))
 #else
@@ -39,27 +35,28 @@ struct TargetManagerInterface_Request_
 
   explicit TargetManagerInterface_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->structure_needs_at_least_one_member = 0;
+    }
   }
 
   explicit TargetManagerInterface_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->structure_needs_at_least_one_member = 0;
+    }
   }
 
   // field types and members
-  using _targets_type =
-    std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::Point_<ContainerAllocator>>>;
-  _targets_type targets;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__targets(
-    const std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::Point_<ContainerAllocator>>> & _arg)
-  {
-    this->targets = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -103,7 +100,7 @@ struct TargetManagerInterface_Request_
   // comparison operators
   bool operator==(const TargetManagerInterface_Request_ & other) const
   {
-    if (this->targets != other.targets) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;
@@ -127,8 +124,7 @@ using TargetManagerInterface_Request =
 
 // Include directives for member types
 // Member 'targets'
-// already included above
-// #include "geometry_msgs/msg/detail/point__struct.hpp"
+#include "geometry_msgs/msg/detail/point__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__iot_project_interfaces__srv__TargetManagerInterface_Response __attribute__((deprecated))
@@ -163,6 +159,9 @@ struct TargetManagerInterface_Response_
   using _targets_type =
     std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::Point_<ContainerAllocator>>>;
   _targets_type targets;
+  using _expiration_times_type =
+    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
+  _expiration_times_type expiration_times;
   using _last_visits_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _last_visits_type last_visits;
@@ -172,6 +171,12 @@ struct TargetManagerInterface_Response_
     const std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::Point_<ContainerAllocator>>> & _arg)
   {
     this->targets = _arg;
+    return *this;
+  }
+  Type & set__expiration_times(
+    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
+  {
+    this->expiration_times = _arg;
     return *this;
   }
   Type & set__last_visits(
@@ -224,6 +229,9 @@ struct TargetManagerInterface_Response_
   bool operator==(const TargetManagerInterface_Response_ & other) const
   {
     if (this->targets != other.targets) {
+      return false;
+    }
+    if (this->expiration_times != other.expiration_times) {
       return false;
     }
     if (this->last_visits != other.last_visits) {

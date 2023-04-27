@@ -37,68 +37,23 @@ void TargetManagerInterface_Request_fini_function(void * message_memory)
   typed_message->~TargetManagerInterface_Request();
 }
 
-size_t size_function__TargetManagerInterface_Request__targets(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<geometry_msgs::msg::Point> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__TargetManagerInterface_Request__targets(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<geometry_msgs::msg::Point> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__TargetManagerInterface_Request__targets(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<geometry_msgs::msg::Point> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__TargetManagerInterface_Request__targets(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const geometry_msgs::msg::Point *>(
-    get_const_function__TargetManagerInterface_Request__targets(untyped_member, index));
-  auto & value = *reinterpret_cast<geometry_msgs::msg::Point *>(untyped_value);
-  value = item;
-}
-
-void assign_function__TargetManagerInterface_Request__targets(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<geometry_msgs::msg::Point *>(
-    get_function__TargetManagerInterface_Request__targets(untyped_member, index));
-  const auto & value = *reinterpret_cast<const geometry_msgs::msg::Point *>(untyped_value);
-  item = value;
-}
-
-void resize_function__TargetManagerInterface_Request__targets(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<geometry_msgs::msg::Point> *>(untyped_member);
-  member->resize(size);
-}
-
 static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetManagerInterface_Request_message_member_array[1] = {
   {
-    "targets",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "structure_needs_at_least_one_member",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::Point>(),  // members of sub message
-    true,  // is array
+    nullptr,  // members of sub message
+    false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces::srv::TargetManagerInterface_Request, targets),  // bytes offset in struct
+    offsetof(iot_project_interfaces::srv::TargetManagerInterface_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     nullptr,  // default value
-    size_function__TargetManagerInterface_Request__targets,  // size() function pointer
-    get_const_function__TargetManagerInterface_Request__targets,  // get_const(index) function pointer
-    get_function__TargetManagerInterface_Request__targets,  // get(index) function pointer
-    fetch_function__TargetManagerInterface_Request__targets,  // fetch(index, &value) function pointer
-    assign_function__TargetManagerInterface_Request__targets,  // assign(index, value) function pointer
-    resize_function__TargetManagerInterface_Request__targets  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
@@ -246,6 +201,51 @@ void resize_function__TargetManagerInterface_Response__targets(void * untyped_me
   member->resize(size);
 }
 
+size_t size_function__TargetManagerInterface_Response__expiration_times(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__TargetManagerInterface_Response__expiration_times(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<double> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__TargetManagerInterface_Response__expiration_times(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<double> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__TargetManagerInterface_Response__expiration_times(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__TargetManagerInterface_Response__expiration_times(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__TargetManagerInterface_Response__expiration_times(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__TargetManagerInterface_Response__expiration_times(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+void resize_function__TargetManagerInterface_Response__expiration_times(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<double> *>(untyped_member);
+  member->resize(size);
+}
+
 size_t size_function__TargetManagerInterface_Response__last_visits(const void * untyped_member)
 {
   const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
@@ -291,7 +291,7 @@ void resize_function__TargetManagerInterface_Response__last_visits(void * untype
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetManagerInterface_Response_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetManagerInterface_Response_message_member_array[3] = {
   {
     "targets",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -308,6 +308,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetManager
     fetch_function__TargetManagerInterface_Response__targets,  // fetch(index, &value) function pointer
     assign_function__TargetManagerInterface_Response__targets,  // assign(index, value) function pointer
     resize_function__TargetManagerInterface_Response__targets  // resize(index) function pointer
+  },
+  {
+    "expiration_times",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(iot_project_interfaces::srv::TargetManagerInterface_Response, expiration_times),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__TargetManagerInterface_Response__expiration_times,  // size() function pointer
+    get_const_function__TargetManagerInterface_Response__expiration_times,  // get_const(index) function pointer
+    get_function__TargetManagerInterface_Response__expiration_times,  // get(index) function pointer
+    fetch_function__TargetManagerInterface_Response__expiration_times,  // fetch(index, &value) function pointer
+    assign_function__TargetManagerInterface_Response__expiration_times,  // assign(index, value) function pointer
+    resize_function__TargetManagerInterface_Response__expiration_times  // resize(index) function pointer
   },
   {
     "last_visits",  // name
@@ -331,7 +348,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TargetManager
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers TargetManagerInterface_Response_message_members = {
   "iot_project_interfaces::srv",  // message namespace
   "TargetManagerInterface_Response",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(iot_project_interfaces::srv::TargetManagerInterface_Response),
   TargetManagerInterface_Response_message_member_array,  // message members
   TargetManagerInterface_Response_init_function,  // function to initialize message memory (memory has to be allocated)

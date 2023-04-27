@@ -7,10 +7,12 @@
 module iot_project_interfaces {
   module srv {
     struct TargetManagerInterface_Request {
-      sequence<geometry_msgs::msg::Point> targets;
+      uint8 structure_needs_at_least_one_member;
     };
     struct TargetManagerInterface_Response {
       sequence<geometry_msgs::msg::Point> targets;
+
+      sequence<double> expiration_times;
 
       sequence<double> last_visits;
     };

@@ -30,6 +30,7 @@ class GradeDisplay(Node):
         # parameters for tracking the targets' values
         self.target_tags = ["target_0", "target_1", "target_2", "target_3", "target_4"]
         self.last_visits = [0.0]*5
+        self.expiration_times = [0.0]*5
         self.timer_tag = "timer"
         self.score_tag = "score"
         self.display_thread = None
@@ -50,9 +51,17 @@ class GradeDisplay(Node):
             '/task_assigner/get_targets'
         )
 
+
+        self.get_logger().info("Grader Display is starting.")
+        self.get_logger().info("Waiting for targets' data Service...")
+
+        while not self.target_client.wait_for_service(timeout_sec=1.0):
+            pass
+
+        self.get_logger().info("Service online. Display will now run.")
+
         self.create_timer(0.1, self.update_times)
         self.start_gui()
-        self.get_logger().info("Grader Display started")
         
 
     def update_times(self):
@@ -61,6 +70,7 @@ class GradeDisplay(Node):
     
     def update_times_callback(self, res : Future):
         self.last_visits = res.result().last_visits
+        self.expiration_times = res.result().expiration_times
 
     def store_time_callback(self, msg : Clock):
         self.clock = msg.clock.sec * 10**9 + msg.clock.nanosec
@@ -81,7 +91,7 @@ class GradeDisplay(Node):
 
                         with dpg.group():
                             dpg.add_button(label="Target %d" % (i+1), width=150)
-                            dpg.add_slider_float(tag=self.target_tags[i], max_value = TIME_PER_TARGET, width = 150, height = 150, vertical = True)
+                            dpg.add_slider_float(tag=self.target_tags[i], max_value = self.expiration_times[i], width = 150, height = 150, vertical = True)
 
 
             dpg.add_button(tag=self.timer_tag, label = "TIMER", width = 782, height = 90)
@@ -108,13 +118,13 @@ class GradeDisplay(Node):
 
                 target_time_float = self.last_visits[t] / 10**9
 
-                target_time_left = max(0, TIME_PER_TARGET - (clock_float - target_time_float))
+                target_time_left = max(0, self.expiration_times[t] - (clock_float - target_time_float))
 
                 if target_time_left > 0:
                     score += 1 * score_weight
-                #print(time_left)
 
                 dpg.set_value(self.target_tags[t], value=target_time_left)
+                dpg.configure_item(self.target_tags[t], max_value=self.expiration_times[t])
                 dpg.configure_item(self.score_tag, label="SCORE: %d" % score)
 
             dpg.render_dearpygui_frame()

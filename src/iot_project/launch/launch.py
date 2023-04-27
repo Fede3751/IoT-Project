@@ -9,9 +9,10 @@ from random import randint
 
 WORLD_NAME = "iot_project_world"
 
-X_POS = [-5,-5,7,3,5]
-Y_POS = [-5,2,7,-5,5]
-Z_POS = [3,5,7,6,7]
+X_POS = [-5, -5, 7, 3, 5]
+Y_POS = [-5, 2, 7, -5, 5]
+Z_POS = [3, 5, 7, 6, 7]
+TIMES = [30, 30, 30, 30, 25]
 
 NO_DRONES = 3
 NO_TARGETS = 5
@@ -23,7 +24,7 @@ NO_TARGETS = 5
 
 def generate_launch_description():
 
-  targets_positions = []
+  targets = []
     
   for i in range(NO_TARGETS):
   
@@ -31,8 +32,9 @@ def generate_launch_description():
     x_pos = X_POS[i]
     y_pos = Y_POS[i]
     z_pos = Z_POS[i]
+    time  = TIMES[i]
 
-    targets_positions.append((x_pos, y_pos, z_pos))
+    targets.append((x_pos, y_pos, z_pos, time))
 
 
   #------------------- Launch Gazebo here, with the iot_project_world world --------------------
@@ -100,21 +102,22 @@ def generate_launch_description():
               "-name",
               "target_"+str(i),
               "-x",
-              str(targets_positions[i][0]),
+              str(targets[i][0]),
               "-y",
-              str(targets_positions[i][1]),
+              str(targets[i][1]),
               "-z",
-              str(targets_positions[i][2])
+              str(targets[i][2])
           ],
           name='sim'
       )
     )
 
   positions = []
-  for target in targets_positions:
+  for target in targets:
     positions.append(str(target[0]))
     positions.append(str(target[1]))
     positions.append(str(target[2]))
+    positions.append(str(target[3]))
 
 
   #-------------------------------- Tester and grader are started here -------------------------

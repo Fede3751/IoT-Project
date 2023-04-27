@@ -18,19 +18,19 @@ def unit_vector_between_points(p0 : tuple, p1 : tuple):
 
 def move_vector(p0 : tuple, p1 : tuple):
 
-    '''
+	'''
     Computes the unit vector between the two given points on a 2d plane.
-    The vector is calculated on the 2d plane of the x and z component
-    of two points in a 3D space.
-    Vector is always assumed to be forward (positive x value)
+    The vector is calculated on a 2d plane perpendicular to the ground_plane
+    and passing between p0 and p1.
+    The x and y components are merged into a single, forward, component.
     Direction of the vector is from p0 to p1.
     p0: the coordinates of the first point (x0, y0, z0)
     p1: the coordinates of the second point (x1, y1, z1)
     '''
-    vb = (abs(p1[0] - p0[0]), p1[2] - p0[2])
-    norm = math.sqrt(vb[0]**2 + vb[1] ** 2)
+	vb = (math.sqrt( (p1[0] - p0[0])**2 + (p1[1] - p0[1])**2), p1[2] - p0[2])
+	norm = math.sqrt(vb[0]**2 + vb[1]**2)
 
-    return (vb[0] / norm, vb[1] / norm)
+	return (vb[0] / norm, vb[1] / norm)
 
 
 def angle_between_points(p0 : tuple, p1 : tuple):

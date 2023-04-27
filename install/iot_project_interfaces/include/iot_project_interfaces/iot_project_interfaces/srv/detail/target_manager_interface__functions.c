@@ -10,21 +10,13 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `targets`
-#include "geometry_msgs/msg/detail/point__functions.h"
-
 bool
 iot_project_interfaces__srv__TargetManagerInterface_Request__init(iot_project_interfaces__srv__TargetManagerInterface_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // targets
-  if (!geometry_msgs__msg__Point__Sequence__init(&msg->targets, 0)) {
-    iot_project_interfaces__srv__TargetManagerInterface_Request__fini(msg);
-    return false;
-  }
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -34,8 +26,7 @@ iot_project_interfaces__srv__TargetManagerInterface_Request__fini(iot_project_in
   if (!msg) {
     return;
   }
-  // targets
-  geometry_msgs__msg__Point__Sequence__fini(&msg->targets);
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -44,10 +35,8 @@ iot_project_interfaces__srv__TargetManagerInterface_Request__are_equal(const iot
   if (!lhs || !rhs) {
     return false;
   }
-  // targets
-  if (!geometry_msgs__msg__Point__Sequence__are_equal(
-      &(lhs->targets), &(rhs->targets)))
-  {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -61,12 +50,8 @@ iot_project_interfaces__srv__TargetManagerInterface_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // targets
-  if (!geometry_msgs__msg__Point__Sequence__copy(
-      &(input->targets), &(output->targets)))
-  {
-    return false;
-  }
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 
@@ -252,8 +237,8 @@ iot_project_interfaces__srv__TargetManagerInterface_Request__Sequence__copy(
 
 // Include directives for member types
 // Member `targets`
-// already included above
-// #include "geometry_msgs/msg/detail/point__functions.h"
+#include "geometry_msgs/msg/detail/point__functions.h"
+// Member `expiration_times`
 // Member `last_visits`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
@@ -265,6 +250,11 @@ iot_project_interfaces__srv__TargetManagerInterface_Response__init(iot_project_i
   }
   // targets
   if (!geometry_msgs__msg__Point__Sequence__init(&msg->targets, 0)) {
+    iot_project_interfaces__srv__TargetManagerInterface_Response__fini(msg);
+    return false;
+  }
+  // expiration_times
+  if (!rosidl_runtime_c__double__Sequence__init(&msg->expiration_times, 0)) {
     iot_project_interfaces__srv__TargetManagerInterface_Response__fini(msg);
     return false;
   }
@@ -284,6 +274,8 @@ iot_project_interfaces__srv__TargetManagerInterface_Response__fini(iot_project_i
   }
   // targets
   geometry_msgs__msg__Point__Sequence__fini(&msg->targets);
+  // expiration_times
+  rosidl_runtime_c__double__Sequence__fini(&msg->expiration_times);
   // last_visits
   rosidl_runtime_c__double__Sequence__fini(&msg->last_visits);
 }
@@ -297,6 +289,12 @@ iot_project_interfaces__srv__TargetManagerInterface_Response__are_equal(const io
   // targets
   if (!geometry_msgs__msg__Point__Sequence__are_equal(
       &(lhs->targets), &(rhs->targets)))
+  {
+    return false;
+  }
+  // expiration_times
+  if (!rosidl_runtime_c__double__Sequence__are_equal(
+      &(lhs->expiration_times), &(rhs->expiration_times)))
   {
     return false;
   }
@@ -320,6 +318,12 @@ iot_project_interfaces__srv__TargetManagerInterface_Response__copy(
   // targets
   if (!geometry_msgs__msg__Point__Sequence__copy(
       &(input->targets), &(output->targets)))
+  {
+    return false;
+  }
+  // expiration_times
+  if (!rosidl_runtime_c__double__Sequence__copy(
+      &(input->expiration_times), &(output->expiration_times)))
   {
     return false;
   }

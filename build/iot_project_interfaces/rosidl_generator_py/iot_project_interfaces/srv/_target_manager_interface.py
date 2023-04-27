@@ -5,8 +5,6 @@
 
 # Import statements for member types
 
-import builtins  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -42,10 +40,6 @@ class Metaclass_TargetManagerInterface_Request(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__target_manager_interface__request
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__target_manager_interface__request
 
-            from geometry_msgs.msg import Point
-            if Point.__class__._TYPE_SUPPORT is None:
-                Point.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -59,22 +53,18 @@ class TargetManagerInterface_Request(metaclass=Metaclass_TargetManagerInterface_
     """Message class 'TargetManagerInterface_Request'."""
 
     __slots__ = [
-        '_targets',
     ]
 
     _fields_and_field_types = {
-        'targets': 'sequence<geometry_msgs/Point>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Point')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.targets = kwargs.get('targets', [])
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -105,8 +95,6 @@ class TargetManagerInterface_Request(metaclass=Metaclass_TargetManagerInterface_
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.targets != other.targets:
-            return False
         return True
 
     @classmethod
@@ -114,38 +102,14 @@ class TargetManagerInterface_Request(metaclass=Metaclass_TargetManagerInterface_
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def targets(self):
-        """Message field 'targets'."""
-        return self._targets
-
-    @targets.setter
-    def targets(self, value):
-        if __debug__:
-            from geometry_msgs.msg import Point
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, Point) for v in value) and
-                 True), \
-                "The 'targets' field must be a set or sequence and each value of type 'Point'"
-        self._targets = value
-
 
 # Import statements for member types
 
+# Member 'expiration_times'
 # Member 'last_visits'
 import array  # noqa: E402, I100
 
-# already imported above
-# import builtins
+import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
 
@@ -203,16 +167,19 @@ class TargetManagerInterface_Response(metaclass=Metaclass_TargetManagerInterface
 
     __slots__ = [
         '_targets',
+        '_expiration_times',
         '_last_visits',
     ]
 
     _fields_and_field_types = {
         'targets': 'sequence<geometry_msgs/Point>',
+        'expiration_times': 'sequence<double>',
         'last_visits': 'sequence<double>',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Point')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
     )
 
@@ -221,6 +188,7 @@ class TargetManagerInterface_Response(metaclass=Metaclass_TargetManagerInterface
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.targets = kwargs.get('targets', [])
+        self.expiration_times = array.array('d', kwargs.get('expiration_times', []))
         self.last_visits = array.array('d', kwargs.get('last_visits', []))
 
     def __repr__(self):
@@ -254,6 +222,8 @@ class TargetManagerInterface_Response(metaclass=Metaclass_TargetManagerInterface
             return False
         if self.targets != other.targets:
             return False
+        if self.expiration_times != other.expiration_times:
+            return False
         if self.last_visits != other.last_visits:
             return False
         return True
@@ -286,6 +256,34 @@ class TargetManagerInterface_Response(metaclass=Metaclass_TargetManagerInterface
                  True), \
                 "The 'targets' field must be a set or sequence and each value of type 'Point'"
         self._targets = value
+
+    @builtins.property
+    def expiration_times(self):
+        """Message field 'expiration_times'."""
+        return self._expiration_times
+
+    @expiration_times.setter
+    def expiration_times(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'd', \
+                "The 'expiration_times' array.array() must have the type code of 'd'"
+            self._expiration_times = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'expiration_times' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._expiration_times = array.array('d', value)
 
     @builtins.property
     def last_visits(self):

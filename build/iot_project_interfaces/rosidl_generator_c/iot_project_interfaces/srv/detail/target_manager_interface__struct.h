@@ -17,14 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'targets'
-#include "geometry_msgs/msg/detail/point__struct.h"
-
 /// Struct defined in srv/TargetManagerInterface in the package iot_project_interfaces.
 typedef struct iot_project_interfaces__srv__TargetManagerInterface_Request
 {
-  geometry_msgs__msg__Point__Sequence targets;
+  uint8_t structure_needs_at_least_one_member;
 } iot_project_interfaces__srv__TargetManagerInterface_Request;
 
 // Struct for a sequence of iot_project_interfaces__srv__TargetManagerInterface_Request.
@@ -42,8 +38,8 @@ typedef struct iot_project_interfaces__srv__TargetManagerInterface_Request__Sequ
 
 // Include directives for member types
 // Member 'targets'
-// already included above
-// #include "geometry_msgs/msg/detail/point__struct.h"
+#include "geometry_msgs/msg/detail/point__struct.h"
+// Member 'expiration_times'
 // Member 'last_visits'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
@@ -51,6 +47,7 @@ typedef struct iot_project_interfaces__srv__TargetManagerInterface_Request__Sequ
 typedef struct iot_project_interfaces__srv__TargetManagerInterface_Response
 {
   geometry_msgs__msg__Point__Sequence targets;
+  rosidl_runtime_c__double__Sequence expiration_times;
   rosidl_runtime_c__double__Sequence last_visits;
 } iot_project_interfaces__srv__TargetManagerInterface_Response;
 
