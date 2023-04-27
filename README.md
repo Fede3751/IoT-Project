@@ -45,6 +45,7 @@ Your solution should go in:
 /src/iot_project_solution
 ```
 The package already includes some files set for you.
+Note that files outside this package won't be considered for your submission.
 
 
 Good luck!
