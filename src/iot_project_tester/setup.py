@@ -1,5 +1,10 @@
+import os
+from glob import glob
+
 from setuptools import setup
+
 package_name = 'iot_project_tester'
+
 
 setup(
     name=package_name,
@@ -8,7 +13,8 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml'])
+        ('share/' + package_name, ['package.xml']),
+        (os.path.join('lib', package_name), glob(package_name + '/math_utils.py*'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,

@@ -9,6 +9,7 @@ setup.py
 ../../build/iot_project_tester/iot_project_tester.egg-info/top_level.txt
 ../../build/iot_project_tester/iot_project_tester.egg-info/zip-safe
 iot_project_tester/__init__.py
+iot_project_tester/math_utils.py
 iot_project_tester/target_handler.py
 resource/iot_project_tester
 test/test_copyright.py
