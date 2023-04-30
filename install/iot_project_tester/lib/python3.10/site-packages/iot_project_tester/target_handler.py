@@ -64,44 +64,15 @@ class TargetHandler(Node):
         )
 
 
-        DRONES = ["X3_0", "X3_1", "X3_2"]
+        for drone in DRONES:
+            print(drone)
+            self.create_subscription(
+                Odometry,
+                drone+"/odometry",
+                lambda msg, drone=drone: self.register_drone_position(msg, drone),
+                10,
+            )
 
-
-
-        # Apparently subscribing in a for loop is bugged?
-        # These lines will create a subscription only to X3_2, ignoring the other drones
-
-        # for drone in DRONES:
-        #     print(drone)
-        #     self.create_subscription(
-        #         Odometry,
-        #         drone+"/odometry",
-        #         lambda msg: self.register_drone_position(msg, drone),
-        #         10,
-        #     )
-
-        self.create_subscription(
-            Odometry,
-            "X3_0/odometry",
-            lambda msg: self.register_drone_position(msg, "X3_0"),
-            10,
-            
-        )
-
-        self.create_subscription(
-            Odometry,
-            "X3_1/odometry",
-            lambda msg: self.register_drone_position(msg, "X3_1"),
-            10,
-            
-        )
-        self.create_subscription(
-            Odometry,
-            "X3_2/odometry",
-            lambda msg: self.register_drone_position(msg, "X3_2"),
-            10,
-            
-        )
 
         self.get_logger().info("Target handler started. Positions are being published to /task_assigner/get_targets")
 
