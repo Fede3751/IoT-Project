@@ -1,4 +1,4 @@
-# IoT-Project - Early Version
+# IoT-Project - Early Version v0.2
 
 <p align="center">
   <img src="https://fede3751.github.io/IoT_lectures/imgs/project/project_splashart.png">
@@ -19,25 +19,32 @@ Feel free to use this version of the project to get used to the topics and servi
 
 Can you write a code to achieve the best score?
 
-
+## Launching the Simulation
 
 You can start the project just by running:
 
 ```
 ./start
 ```
-This will automatically compile your solution package, source the environment, and launch the simulation.
+This will automatically compile your solution package, source the environment, and launch the simulation.<br><br>
 
+## Package Organization
 
-<br>
-A full simulation is composed of multiple executables:<br>
--The Gazebo simulation.<br>
--Mutiple ros_gz_bridge nodes which link the simulation to the ROS environment.<br>
--A ROS Tester node which keeps track of the positions of the drones and stores information in order to compute a score.<br>
--A ROS Grader node which displays in a window your current score (by using DearPyGui libraries for the graphics).<br>
--Your ROS Solution, ideally composed of multiple ROS Drone Controller nodes, and one ROS Task Assigner node to give instruction to the drones.<br><br>
+The workspace is composed of multiple packages:<br><br>
+**iot_project**<br>
+  &emsp; Wraps all the other packages together and exposes one launch file to launch the whole simulation<br>
+**iot_project_tester**<br>
+  &emsp; Responsable of keeping track of drones and target positiond and update simulation values correctly<br>
+**iot_project_grader**<br>
+  &emsp; Used to visualize the current score, by reading values outputted by the tester<br>
+**iot_project_target_animator**<br>
+  &emsp; C++ package currently used only to change color of the sphere in the simulation<br>
+**iot_project_interfaces**<br>
+  &emsp; Stores all the interfaces used in this workspace<br>
+**iot_project_solution**<br>
+  &emsp; Package for storing your solution to the project<br><br>
 
-
+## Solution Submission
 
 Your solution should go in:
 
