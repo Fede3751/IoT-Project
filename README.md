@@ -38,7 +38,7 @@ The workspace is composed of multiple packages:<br><br>
 **iot_project_grader**<br>
   &emsp; Used to visualize the current score, by reading values outputted by the tester<br>
 **iot_project_target_animator**<br>
-  &emsp; C++ package currently used only to change color of the sphere in the simulation<br>
+  &emsp; C++ package currently used only to change color of the spheres in the simulation<br>
 **iot_project_interfaces**<br>
   &emsp; Stores all the interfaces used in this workspace<br>
 **iot_project_solution**<br>
@@ -52,7 +52,7 @@ Your solution should go in:
 /src/iot_project_solution
 ```
 The package already includes some files set for you.<br>
-Note that files outside this package won't be considered for your submission.
+Note that files outside of this package won't be considered for your submission.
 
 
 Good luck!
