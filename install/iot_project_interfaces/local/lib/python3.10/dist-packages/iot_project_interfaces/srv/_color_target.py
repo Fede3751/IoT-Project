@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -48,7 +50,13 @@ class Metaclass_ColorTarget_Request(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
+            'A__DEFAULT': 1.0,
         }
+
+    @property
+    def A__DEFAULT(cls):
+        """Return default value for message field 'a'."""
+        return 1.0
 
 
 class ColorTarget_Request(metaclass=Metaclass_ColorTarget_Request):
@@ -56,23 +64,26 @@ class ColorTarget_Request(metaclass=Metaclass_ColorTarget_Request):
 
     __slots__ = [
         '_target',
-        '_color_r',
-        '_color_g',
-        '_color_b',
+        '_r',
+        '_g',
+        '_b',
+        '_a',
     ]
 
     _fields_and_field_types = {
         'target': 'string',
-        'color_r': 'int8',
-        'color_g': 'int8',
-        'color_b': 'int8',
+        'r': 'double',
+        'g': 'double',
+        'b': 'double',
+        'a': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -80,9 +91,11 @@ class ColorTarget_Request(metaclass=Metaclass_ColorTarget_Request):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.target = kwargs.get('target', str())
-        self.color_r = kwargs.get('color_r', int())
-        self.color_g = kwargs.get('color_g', int())
-        self.color_b = kwargs.get('color_b', int())
+        self.r = kwargs.get('r', float())
+        self.g = kwargs.get('g', float())
+        self.b = kwargs.get('b', float())
+        self.a = kwargs.get(
+            'a', ColorTarget_Request.A__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -115,11 +128,13 @@ class ColorTarget_Request(metaclass=Metaclass_ColorTarget_Request):
             return False
         if self.target != other.target:
             return False
-        if self.color_r != other.color_r:
+        if self.r != other.r:
             return False
-        if self.color_g != other.color_g:
+        if self.g != other.g:
             return False
-        if self.color_b != other.color_b:
+        if self.b != other.b:
+            return False
+        if self.a != other.a:
             return False
         return True
 
@@ -142,49 +157,64 @@ class ColorTarget_Request(metaclass=Metaclass_ColorTarget_Request):
         self._target = value
 
     @builtins.property
-    def color_r(self):
-        """Message field 'color_r'."""
-        return self._color_r
+    def r(self):
+        """Message field 'r'."""
+        return self._r
 
-    @color_r.setter
-    def color_r(self, value):
+    @r.setter
+    def r(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'color_r' field must be of type 'int'"
-            assert value >= -128 and value < 128, \
-                "The 'color_r' field must be an integer in [-128, 127]"
-        self._color_r = value
+                isinstance(value, float), \
+                "The 'r' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'r' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._r = value
 
     @builtins.property
-    def color_g(self):
-        """Message field 'color_g'."""
-        return self._color_g
+    def g(self):
+        """Message field 'g'."""
+        return self._g
 
-    @color_g.setter
-    def color_g(self, value):
+    @g.setter
+    def g(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'color_g' field must be of type 'int'"
-            assert value >= -128 and value < 128, \
-                "The 'color_g' field must be an integer in [-128, 127]"
-        self._color_g = value
+                isinstance(value, float), \
+                "The 'g' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'g' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._g = value
 
     @builtins.property
-    def color_b(self):
-        """Message field 'color_b'."""
-        return self._color_b
+    def b(self):
+        """Message field 'b'."""
+        return self._b
 
-    @color_b.setter
-    def color_b(self, value):
+    @b.setter
+    def b(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'color_b' field must be of type 'int'"
-            assert value >= -128 and value < 128, \
-                "The 'color_b' field must be an integer in [-128, 127]"
-        self._color_b = value
+                isinstance(value, float), \
+                "The 'b' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'b' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._b = value
+
+    @builtins.property
+    def a(self):
+        """Message field 'a'."""
+        return self._a
+
+    @a.setter
+    def a(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'a' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'a' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._a = value
 
 
 # Import statements for member types

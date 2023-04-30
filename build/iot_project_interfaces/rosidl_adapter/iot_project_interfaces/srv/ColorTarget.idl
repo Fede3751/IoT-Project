@@ -8,11 +8,14 @@ module iot_project_interfaces {
     struct ColorTarget_Request {
       string target;
 
-      int8 color_r;
+      double r;
 
-      int8 color_g;
+      double g;
 
-      int8 color_b;
+      double b;
+
+      @default (value=1.0)
+      double a;
     };
     struct ColorTarget_Response {
       boolean result;

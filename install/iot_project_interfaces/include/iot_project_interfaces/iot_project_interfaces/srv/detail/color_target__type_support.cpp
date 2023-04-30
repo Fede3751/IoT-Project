@@ -37,7 +37,7 @@ void ColorTarget_Request_fini_function(void * message_memory)
   typed_message->~ColorTarget_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorTarget_Request_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorTarget_Request_message_member_array[5] = {
   {
     "target",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -56,14 +56,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorTarget_R
     nullptr  // resize(index) function pointer
   },
   {
-    "color_r",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
+    "r",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces::srv::ColorTarget_Request, color_r),  // bytes offset in struct
+    offsetof(iot_project_interfaces::srv::ColorTarget_Request, r),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -73,14 +73,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorTarget_R
     nullptr  // resize(index) function pointer
   },
   {
-    "color_g",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
+    "g",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces::srv::ColorTarget_Request, color_g),  // bytes offset in struct
+    offsetof(iot_project_interfaces::srv::ColorTarget_Request, g),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -90,14 +90,31 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorTarget_R
     nullptr  // resize(index) function pointer
   },
   {
-    "color_b",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
+    "b",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces::srv::ColorTarget_Request, color_b),  // bytes offset in struct
+    offsetof(iot_project_interfaces::srv::ColorTarget_Request, b),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "a",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(iot_project_interfaces::srv::ColorTarget_Request, a),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -111,7 +128,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorTarget_R
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ColorTarget_Request_message_members = {
   "iot_project_interfaces::srv",  // message namespace
   "ColorTarget_Request",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(iot_project_interfaces::srv::ColorTarget_Request),
   ColorTarget_Request_message_member_array,  // message members
   ColorTarget_Request_init_function,  // function to initialize message memory (memory has to be allocated)

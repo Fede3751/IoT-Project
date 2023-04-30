@@ -25,9 +25,10 @@ extern "C"
 typedef struct iot_project_interfaces__srv__ColorTarget_Request
 {
   rosidl_runtime_c__String target;
-  int8_t color_r;
-  int8_t color_g;
-  int8_t color_b;
+  double r;
+  double g;
+  double b;
+  double a;
 } iot_project_interfaces__srv__ColorTarget_Request;
 
 // Struct for a sequence of iot_project_interfaces__srv__ColorTarget_Request.

@@ -65,19 +65,24 @@ static bool _ColorTarget_Request__cdr_serialize(
     cdr << str->data;
   }
 
-  // Field name: color_r
+  // Field name: r
   {
-    cdr << ros_message->color_r;
+    cdr << ros_message->r;
   }
 
-  // Field name: color_g
+  // Field name: g
   {
-    cdr << ros_message->color_g;
+    cdr << ros_message->g;
   }
 
-  // Field name: color_b
+  // Field name: b
   {
-    cdr << ros_message->color_b;
+    cdr << ros_message->b;
+  }
+
+  // Field name: a
+  {
+    cdr << ros_message->a;
   }
 
   return true;
@@ -108,19 +113,24 @@ static bool _ColorTarget_Request__cdr_deserialize(
     }
   }
 
-  // Field name: color_r
+  // Field name: r
   {
-    cdr >> ros_message->color_r;
+    cdr >> ros_message->r;
   }
 
-  // Field name: color_g
+  // Field name: g
   {
-    cdr >> ros_message->color_g;
+    cdr >> ros_message->g;
   }
 
-  // Field name: color_b
+  // Field name: b
   {
-    cdr >> ros_message->color_b;
+    cdr >> ros_message->b;
+  }
+
+  // Field name: a
+  {
+    cdr >> ros_message->a;
   }
 
   return true;
@@ -144,21 +154,27 @@ size_t get_serialized_size_iot_project_interfaces__srv__ColorTarget_Request(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->target.size + 1);
-  // field.name color_r
+  // field.name r
   {
-    size_t item_size = sizeof(ros_message->color_r);
+    size_t item_size = sizeof(ros_message->r);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name color_g
+  // field.name g
   {
-    size_t item_size = sizeof(ros_message->color_g);
+    size_t item_size = sizeof(ros_message->g);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name color_b
+  // field.name b
   {
-    size_t item_size = sizeof(ros_message->color_b);
+    size_t item_size = sizeof(ros_message->b);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name a
+  {
+    size_t item_size = sizeof(ros_message->a);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -201,23 +217,33 @@ size_t max_serialized_size_iot_project_interfaces__srv__ColorTarget_Request(
         1;
     }
   }
-  // member: color_r
+  // member: r
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: color_g
+  // member: g
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: color_b
+  // member: b
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: a
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

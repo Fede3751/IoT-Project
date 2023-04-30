@@ -101,6 +101,8 @@ def generate_launch_description():
               './gazebo_resources/target_obj_blue.sdf',
               "-name",
               "target_"+str(i),
+              "-topic",
+              "test_"+str(i),
               "-x",
               str(targets[i][0]),
               "-y",
@@ -112,12 +114,15 @@ def generate_launch_description():
       )
     )
 
-  positions = []
+  targets_argument = []
+  target_count = 0
   for target in targets:
-    positions.append(str(target[0]))
-    positions.append(str(target[1]))
-    positions.append(str(target[2]))
-    positions.append(str(target[3]))
+    targets_argument.append("target_%d" % target_count)
+    targets_argument.append(str(target[0]))
+    targets_argument.append(str(target[1]))
+    targets_argument.append(str(target[2]))
+    targets_argument.append(str(target[3]))
+    target_count += 1
 
 
   #-------------------------------- Tester and grader are started here -------------------------
@@ -125,10 +130,10 @@ def generate_launch_description():
     Node(
       package='iot_project_tester',
       executable='target_handler',
-      arguments=positions,
+      arguments=targets_argument,
       output='screen',
       emulate_tty=True,
-      name='iot'
+      name='iot_tester'
     )
   )
 
@@ -138,7 +143,17 @@ def generate_launch_description():
       executable='display',
       output='screen',
       emulate_tty=True,
-      name='iot'
+      name='iot_grader'
+    )
+  )
+
+  targets_to_spawn.append(
+    Node(
+      package='iot_project_target_animator',
+      executable='color_changer',
+      output='screen',
+      emulate_tty=True,
+      name='iot_animator'
     )
   )
 

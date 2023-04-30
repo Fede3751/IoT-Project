@@ -34,12 +34,14 @@ cdr_serialize(
 {
   // Member: target
   cdr << ros_message.target;
-  // Member: color_r
-  cdr << ros_message.color_r;
-  // Member: color_g
-  cdr << ros_message.color_g;
-  // Member: color_b
-  cdr << ros_message.color_b;
+  // Member: r
+  cdr << ros_message.r;
+  // Member: g
+  cdr << ros_message.g;
+  // Member: b
+  cdr << ros_message.b;
+  // Member: a
+  cdr << ros_message.a;
   return true;
 }
 
@@ -52,14 +54,17 @@ cdr_deserialize(
   // Member: target
   cdr >> ros_message.target;
 
-  // Member: color_r
-  cdr >> ros_message.color_r;
+  // Member: r
+  cdr >> ros_message.r;
 
-  // Member: color_g
-  cdr >> ros_message.color_g;
+  // Member: g
+  cdr >> ros_message.g;
 
-  // Member: color_b
-  cdr >> ros_message.color_b;
+  // Member: b
+  cdr >> ros_message.b;
+
+  // Member: a
+  cdr >> ros_message.a;
 
   return true;
 }
@@ -81,21 +86,27 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.target.size() + 1);
-  // Member: color_r
+  // Member: r
   {
-    size_t item_size = sizeof(ros_message.color_r);
+    size_t item_size = sizeof(ros_message.r);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: color_g
+  // Member: g
   {
-    size_t item_size = sizeof(ros_message.color_g);
+    size_t item_size = sizeof(ros_message.g);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: color_b
+  // Member: b
   {
-    size_t item_size = sizeof(ros_message.color_b);
+    size_t item_size = sizeof(ros_message.b);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: a
+  {
+    size_t item_size = sizeof(ros_message.a);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -134,25 +145,36 @@ max_serialized_size_ColorTarget_Request(
     }
   }
 
-  // Member: color_r
+  // Member: r
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: color_g
+  // Member: g
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: color_b
+  // Member: b
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: a
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

@@ -4,7 +4,9 @@ import time
 import rclpy
 from rclpy.node import Node
 from iot_project_interfaces.srv import TargetManagerInterface
-from iot_project_interfaces.msg import TargetPositions
+from iot_project_interfaces.srv import ColorTarget
+
+
 from geometry_msgs.msg import Point
 from threading import Thread
 
@@ -18,6 +20,8 @@ from iot_project_tester.math_utils import *
 
 
 DRONES = ["X3_0", "X3_1", "X3_2"]
+TARGET_EPS = 0.5
+
 
 
 class TargetHandler(Node):
@@ -28,7 +32,7 @@ class TargetHandler(Node):
         self.clock = 0
         
         self.targets = []
-
+        self.targets_state_has_changed = []
         self.drone_odometry_topics = []
 
         self.drone_positions = {}
@@ -54,16 +58,50 @@ class TargetHandler(Node):
             10
         )
 
+        self.color_changer_service = self.create_client(
+            ColorTarget,
+            'iot_project/change_color'
+        )
 
-        for drone in DRONES:
 
-            self.create_subscription(
-                Odometry,
-                drone+"/odometry",
-                lambda msg: self.register_drone_position(msg, drone),
-                10,
-                
-            )
+        DRONES = ["X3_0", "X3_1", "X3_2"]
+
+
+
+        # Apparently subscribing in a for loop is bugged?
+        # These lines will create a subscription only to X3_2, ignoring the other drones
+
+        # for drone in DRONES:
+        #     print(drone)
+        #     self.create_subscription(
+        #         Odometry,
+        #         drone+"/odometry",
+        #         lambda msg: self.register_drone_position(msg, drone),
+        #         10,
+        #     )
+
+        self.create_subscription(
+            Odometry,
+            "X3_0/odometry",
+            lambda msg: self.register_drone_position(msg, "X3_0"),
+            10,
+            
+        )
+
+        self.create_subscription(
+            Odometry,
+            "X3_1/odometry",
+            lambda msg: self.register_drone_position(msg, "X3_1"),
+            10,
+            
+        )
+        self.create_subscription(
+            Odometry,
+            "X3_2/odometry",
+            lambda msg: self.register_drone_position(msg, "X3_2"),
+            10,
+            
+        )
 
         self.get_logger().info("Target handler started. Positions are being published to /task_assigner/get_targets")
 
@@ -76,19 +114,30 @@ class TargetHandler(Node):
         self.get_logger().info("Starting tester")
 
         while True:
+            for t in range(len(self.targets)):
+                
+                currently_visited = False
 
-            for d in self.drone_positions.keys():
-                for t in range(len(self.targets)):
-
+                for d in self.drone_positions.keys():
 
                     p0 = (self.drone_positions[d].x, self.drone_positions[d].y, self.drone_positions[d].z)
                     p1 = (self.targets[t]["position"].x, self.targets[t]["position"].y, self.targets[t]["position"].z)
                     
-                    if point_distance(p0, p1) < 1:
+
+                    if point_distance(p0, p1) < TARGET_EPS:
                         self.drones_last_visit[d] = t
                         self.targets[t]["last_visit"] = float(self.clock)
+                        currently_visited = True
 
-            time.sleep(0.1)
+                if currently_visited != self.targets[t]["currently_visited"]:
+                    if currently_visited == True:
+                        self.change_color(self.targets[t]["name"], (0.0, 1.0, 0.0))
+                    if currently_visited == False:
+                        self.change_color(self.targets[t]["name"], (0.0, 0.0, 1.0))
+
+                self.targets[t]["currently_visited"] = currently_visited
+
+            time.sleep(0.01)
 
     def register_drone_position(self, msg : Odometry, drone : str):
         self.drone_positions[drone] = msg.pose.pose.position
@@ -122,18 +171,20 @@ class TargetHandler(Node):
 
         targets = []
 
-        for i in range(0, len(args), 4):
+        for i in range(0, len(args), 5):
             
             try:
                 targets.append(
                     {
-                    "position"        : Point(
-                                            x = float(args[i]),
-                                            y = float(args[i+1]),
-                                            z = float(args[i+2]),
-                                        ),
-                    "expiration_time" : float(args[i+3]),
-                    "last_visit"      : 0.0
+                        "name"              : args[i],
+                        "position"          : Point(
+                                                x = float(args[i+1]),
+                                                y = float(args[i+2]),
+                                                z = float(args[i+3]),
+                                            ),
+                        "expiration_time"   : float(args[i+4]),
+                        "last_visit"        : 0.0,
+                        "currently_visited" : False
                     }
                 )
 
@@ -143,7 +194,19 @@ class TargetHandler(Node):
         self.targets = targets
         
 
+    def change_color(self, target : str, color : tuple):
 
+
+        if len(color) < 3:
+            return
+        
+        request = ColorTarget.Request()
+        request.target = target
+        request.r = color[0]
+        request.g = color[1]
+        request.b = color[2]
+
+        self.color_changer_service.call_async(request)
 
 def main():
     rclpy.init()

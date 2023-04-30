@@ -25,9 +25,11 @@ iot_project_interfaces__srv__ColorTarget_Request__init(iot_project_interfaces__s
     iot_project_interfaces__srv__ColorTarget_Request__fini(msg);
     return false;
   }
-  // color_r
-  // color_g
-  // color_b
+  // r
+  // g
+  // b
+  // a
+  msg->a = 1.0l;
   return true;
 }
 
@@ -39,9 +41,10 @@ iot_project_interfaces__srv__ColorTarget_Request__fini(iot_project_interfaces__s
   }
   // target
   rosidl_runtime_c__String__fini(&msg->target);
-  // color_r
-  // color_g
-  // color_b
+  // r
+  // g
+  // b
+  // a
 }
 
 bool
@@ -56,16 +59,20 @@ iot_project_interfaces__srv__ColorTarget_Request__are_equal(const iot_project_in
   {
     return false;
   }
-  // color_r
-  if (lhs->color_r != rhs->color_r) {
+  // r
+  if (lhs->r != rhs->r) {
     return false;
   }
-  // color_g
-  if (lhs->color_g != rhs->color_g) {
+  // g
+  if (lhs->g != rhs->g) {
     return false;
   }
-  // color_b
-  if (lhs->color_b != rhs->color_b) {
+  // b
+  if (lhs->b != rhs->b) {
+    return false;
+  }
+  // a
+  if (lhs->a != rhs->a) {
     return false;
   }
   return true;
@@ -85,12 +92,14 @@ iot_project_interfaces__srv__ColorTarget_Request__copy(
   {
     return false;
   }
-  // color_r
-  output->color_r = input->color_r;
-  // color_g
-  output->color_g = input->color_g;
-  // color_b
-  output->color_b = input->color_b;
+  // r
+  output->r = input->r;
+  // g
+  output->g = input->g;
+  // b
+  output->b = input->b;
+  // a
+  output->a = input->a;
   return true;
 }
 

@@ -68,31 +68,40 @@ bool iot_project_interfaces__srv__color_target__request__convert_from_py(PyObjec
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
-  {  // color_r
-    PyObject * field = PyObject_GetAttrString(_pymsg, "color_r");
+  {  // r
+    PyObject * field = PyObject_GetAttrString(_pymsg, "r");
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->color_r = (int8_t)PyLong_AsLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->r = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // color_g
-    PyObject * field = PyObject_GetAttrString(_pymsg, "color_g");
+  {  // g
+    PyObject * field = PyObject_GetAttrString(_pymsg, "g");
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->color_g = (int8_t)PyLong_AsLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->g = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // color_b
-    PyObject * field = PyObject_GetAttrString(_pymsg, "color_b");
+  {  // b
+    PyObject * field = PyObject_GetAttrString(_pymsg, "b");
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->color_b = (int8_t)PyLong_AsLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->b = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // a
+    PyObject * field = PyObject_GetAttrString(_pymsg, "a");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->a = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -134,33 +143,44 @@ PyObject * iot_project_interfaces__srv__color_target__request__convert_to_py(voi
       }
     }
   }
-  {  // color_r
+  {  // r
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->color_r);
+    field = PyFloat_FromDouble(ros_message->r);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "color_r", field);
+      int rc = PyObject_SetAttrString(_pymessage, "r", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // color_g
+  {  // g
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->color_g);
+    field = PyFloat_FromDouble(ros_message->g);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "color_g", field);
+      int rc = PyObject_SetAttrString(_pymessage, "g", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // color_b
+  {  // b
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->color_b);
+    field = PyFloat_FromDouble(ros_message->b);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "color_b", field);
+      int rc = PyObject_SetAttrString(_pymessage, "b", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // a
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->a);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "a", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

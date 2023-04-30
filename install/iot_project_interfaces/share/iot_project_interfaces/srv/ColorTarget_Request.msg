@@ -1,4 +1,5 @@
 string target
-int8 color_r
-int8 color_g
-int8 color_b
+float64 r
+float64 g
+float64 b
+float64 a 1.0

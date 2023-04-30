@@ -36,12 +36,23 @@ struct ColorTarget_Request_
   explicit ColorTarget_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+    {
+      this->a = 1.0;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
+      this->target = "";
+      this->r = 0.0;
+      this->g = 0.0;
+      this->b = 0.0;
+      this->a = 0.0;
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->target = "";
-      this->color_r = 0;
-      this->color_g = 0;
-      this->color_b = 0;
+      this->r = 0.0;
+      this->g = 0.0;
+      this->b = 0.0;
     }
   }
 
@@ -49,12 +60,23 @@ struct ColorTarget_Request_
   : target(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+    {
+      this->a = 1.0;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
+      this->target = "";
+      this->r = 0.0;
+      this->g = 0.0;
+      this->b = 0.0;
+      this->a = 0.0;
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->target = "";
-      this->color_r = 0;
-      this->color_g = 0;
-      this->color_b = 0;
+      this->r = 0.0;
+      this->g = 0.0;
+      this->b = 0.0;
     }
   }
 
@@ -62,15 +84,18 @@ struct ColorTarget_Request_
   using _target_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _target_type target;
-  using _color_r_type =
-    int8_t;
-  _color_r_type color_r;
-  using _color_g_type =
-    int8_t;
-  _color_g_type color_g;
-  using _color_b_type =
-    int8_t;
-  _color_b_type color_b;
+  using _r_type =
+    double;
+  _r_type r;
+  using _g_type =
+    double;
+  _g_type g;
+  using _b_type =
+    double;
+  _b_type b;
+  using _a_type =
+    double;
+  _a_type a;
 
   // setters for named parameter idiom
   Type & set__target(
@@ -79,22 +104,28 @@ struct ColorTarget_Request_
     this->target = _arg;
     return *this;
   }
-  Type & set__color_r(
-    const int8_t & _arg)
+  Type & set__r(
+    const double & _arg)
   {
-    this->color_r = _arg;
+    this->r = _arg;
     return *this;
   }
-  Type & set__color_g(
-    const int8_t & _arg)
+  Type & set__g(
+    const double & _arg)
   {
-    this->color_g = _arg;
+    this->g = _arg;
     return *this;
   }
-  Type & set__color_b(
-    const int8_t & _arg)
+  Type & set__b(
+    const double & _arg)
   {
-    this->color_b = _arg;
+    this->b = _arg;
+    return *this;
+  }
+  Type & set__a(
+    const double & _arg)
+  {
+    this->a = _arg;
     return *this;
   }
 
@@ -143,13 +174,16 @@ struct ColorTarget_Request_
     if (this->target != other.target) {
       return false;
     }
-    if (this->color_r != other.color_r) {
+    if (this->r != other.r) {
       return false;
     }
-    if (this->color_g != other.color_g) {
+    if (this->g != other.g) {
       return false;
     }
-    if (this->color_b != other.color_b) {
+    if (this->b != other.b) {
+      return false;
+    }
+    if (this->a != other.a) {
       return false;
     }
     return true;

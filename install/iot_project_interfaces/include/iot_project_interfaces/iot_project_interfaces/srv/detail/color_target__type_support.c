@@ -35,7 +35,7 @@ void iot_project_interfaces__srv__ColorTarget_Request__rosidl_typesupport_intros
   iot_project_interfaces__srv__ColorTarget_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember iot_project_interfaces__srv__ColorTarget_Request__rosidl_typesupport_introspection_c__ColorTarget_Request_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember iot_project_interfaces__srv__ColorTarget_Request__rosidl_typesupport_introspection_c__ColorTarget_Request_message_member_array[5] = {
   {
     "target",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -54,14 +54,14 @@ static rosidl_typesupport_introspection_c__MessageMember iot_project_interfaces_
     NULL  // resize(index) function pointer
   },
   {
-    "color_r",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    "r",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces__srv__ColorTarget_Request, color_r),  // bytes offset in struct
+    offsetof(iot_project_interfaces__srv__ColorTarget_Request, r),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -71,14 +71,14 @@ static rosidl_typesupport_introspection_c__MessageMember iot_project_interfaces_
     NULL  // resize(index) function pointer
   },
   {
-    "color_g",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    "g",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces__srv__ColorTarget_Request, color_g),  // bytes offset in struct
+    offsetof(iot_project_interfaces__srv__ColorTarget_Request, g),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -88,14 +88,31 @@ static rosidl_typesupport_introspection_c__MessageMember iot_project_interfaces_
     NULL  // resize(index) function pointer
   },
   {
-    "color_b",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    "b",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(iot_project_interfaces__srv__ColorTarget_Request, color_b),  // bytes offset in struct
+    offsetof(iot_project_interfaces__srv__ColorTarget_Request, b),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "a",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(iot_project_interfaces__srv__ColorTarget_Request, a),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -109,7 +126,7 @@ static rosidl_typesupport_introspection_c__MessageMember iot_project_interfaces_
 static const rosidl_typesupport_introspection_c__MessageMembers iot_project_interfaces__srv__ColorTarget_Request__rosidl_typesupport_introspection_c__ColorTarget_Request_message_members = {
   "iot_project_interfaces__srv",  // message namespace
   "ColorTarget_Request",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(iot_project_interfaces__srv__ColorTarget_Request),
   iot_project_interfaces__srv__ColorTarget_Request__rosidl_typesupport_introspection_c__ColorTarget_Request_message_member_array,  // message members
   iot_project_interfaces__srv__ColorTarget_Request__rosidl_typesupport_introspection_c__ColorTarget_Request_init_function,  // function to initialize message memory (memory has to be allocated)

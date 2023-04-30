@@ -21,15 +21,15 @@ namespace srv
 namespace builder
 {
 
-class Init_ColorTarget_Request_color_b
+class Init_ColorTarget_Request_a
 {
 public:
-  explicit Init_ColorTarget_Request_color_b(::iot_project_interfaces::srv::ColorTarget_Request & msg)
+  explicit Init_ColorTarget_Request_a(::iot_project_interfaces::srv::ColorTarget_Request & msg)
   : msg_(msg)
   {}
-  ::iot_project_interfaces::srv::ColorTarget_Request color_b(::iot_project_interfaces::srv::ColorTarget_Request::_color_b_type arg)
+  ::iot_project_interfaces::srv::ColorTarget_Request a(::iot_project_interfaces::srv::ColorTarget_Request::_a_type arg)
   {
-    msg_.color_b = std::move(arg);
+    msg_.a = std::move(arg);
     return std::move(msg_);
   }
 
@@ -37,32 +37,48 @@ private:
   ::iot_project_interfaces::srv::ColorTarget_Request msg_;
 };
 
-class Init_ColorTarget_Request_color_g
+class Init_ColorTarget_Request_b
 {
 public:
-  explicit Init_ColorTarget_Request_color_g(::iot_project_interfaces::srv::ColorTarget_Request & msg)
+  explicit Init_ColorTarget_Request_b(::iot_project_interfaces::srv::ColorTarget_Request & msg)
   : msg_(msg)
   {}
-  Init_ColorTarget_Request_color_b color_g(::iot_project_interfaces::srv::ColorTarget_Request::_color_g_type arg)
+  Init_ColorTarget_Request_a b(::iot_project_interfaces::srv::ColorTarget_Request::_b_type arg)
   {
-    msg_.color_g = std::move(arg);
-    return Init_ColorTarget_Request_color_b(msg_);
+    msg_.b = std::move(arg);
+    return Init_ColorTarget_Request_a(msg_);
   }
 
 private:
   ::iot_project_interfaces::srv::ColorTarget_Request msg_;
 };
 
-class Init_ColorTarget_Request_color_r
+class Init_ColorTarget_Request_g
 {
 public:
-  explicit Init_ColorTarget_Request_color_r(::iot_project_interfaces::srv::ColorTarget_Request & msg)
+  explicit Init_ColorTarget_Request_g(::iot_project_interfaces::srv::ColorTarget_Request & msg)
   : msg_(msg)
   {}
-  Init_ColorTarget_Request_color_g color_r(::iot_project_interfaces::srv::ColorTarget_Request::_color_r_type arg)
+  Init_ColorTarget_Request_b g(::iot_project_interfaces::srv::ColorTarget_Request::_g_type arg)
   {
-    msg_.color_r = std::move(arg);
-    return Init_ColorTarget_Request_color_g(msg_);
+    msg_.g = std::move(arg);
+    return Init_ColorTarget_Request_b(msg_);
+  }
+
+private:
+  ::iot_project_interfaces::srv::ColorTarget_Request msg_;
+};
+
+class Init_ColorTarget_Request_r
+{
+public:
+  explicit Init_ColorTarget_Request_r(::iot_project_interfaces::srv::ColorTarget_Request & msg)
+  : msg_(msg)
+  {}
+  Init_ColorTarget_Request_g r(::iot_project_interfaces::srv::ColorTarget_Request::_r_type arg)
+  {
+    msg_.r = std::move(arg);
+    return Init_ColorTarget_Request_g(msg_);
   }
 
 private:
@@ -75,10 +91,10 @@ public:
   Init_ColorTarget_Request_target()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_ColorTarget_Request_color_r target(::iot_project_interfaces::srv::ColorTarget_Request::_target_type arg)
+  Init_ColorTarget_Request_r target(::iot_project_interfaces::srv::ColorTarget_Request::_target_type arg)
   {
     msg_.target = std::move(arg);
-    return Init_ColorTarget_Request_color_r(msg_);
+    return Init_ColorTarget_Request_r(msg_);
   }
 
 private:

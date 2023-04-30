@@ -1,0 +1,8 @@
+source;share/iot_project_target_animator/hook/cmake_prefix_path.ps1
+source;share/iot_project_target_animator/hook/cmake_prefix_path.dsv
+source;share/iot_project_target_animator/hook/cmake_prefix_path.sh
+source;share/iot_project_target_animator/local_setup.bash
+source;share/iot_project_target_animator/local_setup.dsv
+source;share/iot_project_target_animator/local_setup.ps1
+source;share/iot_project_target_animator/local_setup.sh
+source;share/iot_project_target_animator/local_setup.zsh

@@ -32,24 +32,31 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: color_r
+  // member: r
   {
-    out << "color_r: ";
-    rosidl_generator_traits::value_to_yaml(msg.color_r, out);
+    out << "r: ";
+    rosidl_generator_traits::value_to_yaml(msg.r, out);
     out << ", ";
   }
 
-  // member: color_g
+  // member: g
   {
-    out << "color_g: ";
-    rosidl_generator_traits::value_to_yaml(msg.color_g, out);
+    out << "g: ";
+    rosidl_generator_traits::value_to_yaml(msg.g, out);
     out << ", ";
   }
 
-  // member: color_b
+  // member: b
   {
-    out << "color_b: ";
-    rosidl_generator_traits::value_to_yaml(msg.color_b, out);
+    out << "b: ";
+    rosidl_generator_traits::value_to_yaml(msg.b, out);
+    out << ", ";
+  }
+
+  // member: a
+  {
+    out << "a: ";
+    rosidl_generator_traits::value_to_yaml(msg.a, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -68,33 +75,43 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: color_r
+  // member: r
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "color_r: ";
-    rosidl_generator_traits::value_to_yaml(msg.color_r, out);
+    out << "r: ";
+    rosidl_generator_traits::value_to_yaml(msg.r, out);
     out << "\n";
   }
 
-  // member: color_g
+  // member: g
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "color_g: ";
-    rosidl_generator_traits::value_to_yaml(msg.color_g, out);
+    out << "g: ";
+    rosidl_generator_traits::value_to_yaml(msg.g, out);
     out << "\n";
   }
 
-  // member: color_b
+  // member: b
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "color_b: ";
-    rosidl_generator_traits::value_to_yaml(msg.color_b, out);
+    out << "b: ";
+    rosidl_generator_traits::value_to_yaml(msg.b, out);
+    out << "\n";
+  }
+
+  // member: a
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "a: ";
+    rosidl_generator_traits::value_to_yaml(msg.a, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
