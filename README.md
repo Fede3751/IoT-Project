@@ -34,7 +34,7 @@ The workspace is composed of multiple packages:<br><br>
 **iot_project**<br>
   &emsp; Wraps all the other packages together and exposes one launch file to launch the whole simulation<br>
 **iot_project_tester**<br>
-  &emsp; Responsable of keeping track of drones and target positiond and update simulation values correctly<br>
+  &emsp; Responsable of keeping track of drones and target positions and update simulation values correctly<br>
 **iot_project_grader**<br>
   &emsp; Used to visualize the current score, by reading values outputted by the tester<br>
 **iot_project_target_animator**<br>
