@@ -167,8 +167,8 @@ int main(int argc, char ** argv) {
 
     rclcpp::init(argc, argv);
 
-    for (auto association : visualAssociation)
-    std::cout << association.first << " : " << association.second << std::endl;
+    // for (auto association : visualAssociation)
+    // std::cout << association.first << " : " << association.second << std::endl;
 
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("color_changer");
     rclcpp::Service<iot_project_interfaces::srv::ColorTarget>::SharedPtr service =

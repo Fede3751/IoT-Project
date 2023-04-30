@@ -65,7 +65,6 @@ class TargetHandler(Node):
 
 
         for drone in DRONES:
-            print(drone)
             self.create_subscription(
                 Odometry,
                 drone+"/odometry",
