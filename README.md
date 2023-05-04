@@ -61,7 +61,7 @@ The workspace is composed of multiple packages:<br><br>
   &emsp; C++ package currently used only to change color of the spheres in the simulation<br>
 **iot_project_interfaces**<br>
   &emsp; Stores all the interfaces used in this workspace<br>
-**iot_project_solution**<br>
+**iot_project_solution_src**<br>
   &emsp; Package for storing your solution to the project<br>
 **iot_project_solution_interfaces**<br>
   &emsp; Package for storing your solution interfaces to the project<br><br>
