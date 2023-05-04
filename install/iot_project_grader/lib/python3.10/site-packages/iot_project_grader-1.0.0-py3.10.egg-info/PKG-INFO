@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: iot-project-grader
-Version: 1.0.0
-Summary: Iot Project Grader. Displays the score of the project in a convenient window using the DearPyGui libraries
-Maintainer: fede3751
-Maintainer-email: trombetti@di.uniroma1.it
-License: Apache 2.0

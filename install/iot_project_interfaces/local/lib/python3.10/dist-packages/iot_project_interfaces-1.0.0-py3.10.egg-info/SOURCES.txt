@@ -1,6 +1,0 @@
-setup.py
-iot_project_interfaces/__init__.py
-iot_project_interfaces.egg-info/PKG-INFO
-iot_project_interfaces.egg-info/SOURCES.txt
-iot_project_interfaces.egg-info/dependency_links.txt
-iot_project_interfaces.egg-info/top_level.txt

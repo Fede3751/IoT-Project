@@ -1,5 +1,5 @@
 #!/bin/bash
 
-colcon build --packages-select iot_project_solution
+colcon build --packages-select iot_project_solution_src
 source ./install/local_setup.bash
-ros2 launch iot_project launch.py
+ros2 launch iot_project launch.py simulation_file:=./sim_files/simple_simulation.sim

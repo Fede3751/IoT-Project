@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: iot-project-tester
-Version: 1.0.0
-Summary: Iot Project Tester. This package is responsable of starting the Gazebo simulation where your solution will run
-Maintainer: fede3751
-Maintainer-email: trombetti@di.uniroma1.it
-License: Apache 2.0

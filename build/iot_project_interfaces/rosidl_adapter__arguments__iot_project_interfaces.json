@@ -1,9 +1,0 @@
-{
-  "package_name": "iot_project_interfaces",
-  "non_idl_tuples": [
-    "/home/fede3751/Documents/git_repositories/IoT-Project/src/iot_project_interfaces:msg/TargetPositions.msg",
-    "/home/fede3751/Documents/git_repositories/IoT-Project/src/iot_project_interfaces:srv/TargetManagerInterface.srv",
-    "/home/fede3751/Documents/git_repositories/IoT-Project/src/iot_project_interfaces:srv/ColorTarget.srv",
-    "/home/fede3751/Documents/git_repositories/IoT-Project/src/iot_project_interfaces:action/PatrollingAction.action"
-  ]
-}

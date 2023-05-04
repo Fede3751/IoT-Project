@@ -1,2 +1,0 @@
-[console_scripts]
-target_handler = iot_project_tester.target_handler:main

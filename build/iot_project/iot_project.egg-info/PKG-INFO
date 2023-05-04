@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: iot-project
-Version: 0.0.0
-Summary: IoT Project main package. Used only to store the launch file which will use all the packages together
-Maintainer: fede3751
-Maintainer-email: trombetti@di.uniroma1.it
-License: Apache 2.0
