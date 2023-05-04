@@ -1,4 +1,4 @@
-# IoT-Project v1.0a
+# IoT-Project v1.0.1a
 
 <p align="center">
   <img src="https://fede3751.github.io/IoT_lectures/imgs/project/project_splashart.png">
@@ -23,7 +23,11 @@ Your solution will have to provide a patrolling algorithm which takes into accou
 </p>
 
 The grader will display the values of your simulation live, while keeping track of the values of each performance metric.<br>
-For each target, you can check at any given time its threshold time and its AoI function.
+For each target, you can check at any given time its threshold time and its AoI function.<br><br>
+A good solution should be able to keep the Cumulative AoI and Violation as low as possible, while trying to keep the fairness as close as possible to a value of 1.<br><br>
+The importance of which value to prioritize should be decided based on the weights given for each of the three evaluation metrics.
+In the general case, with equal weights among the three metrics, you should always strive to have the least amount of violation, then to minimize the cumulative AoI, and only after that to have a fair solution.<br><br>
+The precise score which takes into account the three evaluation metrics will be added soon to the grader, and will be displayed in the grader application for you to have a single final value to optimize for each instance.
 
 
 ## Launching the Simulation
