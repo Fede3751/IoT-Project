@@ -185,7 +185,7 @@ class GradeDisplay(Node):
 
                 target_time_left = max(0, self.expiration_times[t] - (clock_float - target_time_float))
 
-                score_step = 1 - ((clock_float - target_time_float) / self.simulation_time)
+                score_step = ((clock_float - target_time_float) / self.simulation_time)
                 aoi_score += score_step * score_weight
                 
                 if target_time_left <= 0:
@@ -218,7 +218,7 @@ class GradeDisplay(Node):
             fair_score = aoi_score * evaluated_fariness
             
 
-            dpg.configure_item(self.score_tag, label="AoI Score: \t\t\t\t  %.2f\nViolation Malus: \t\t\t%.2f\nEvaluated Fairness: \t\t %.2f" % (fair_score, violation_malus, evaluated_fariness))
+            dpg.configure_item(self.score_tag, label="Cumulative AoI: \t\t\t %.2f\nCumulative Violation:\t\t%.2f\nEvaluated Fairness: \t\t %.2f" % (fair_score, violation_malus, evaluated_fariness))
          
 
             dpg.render_dearpygui_frame()
