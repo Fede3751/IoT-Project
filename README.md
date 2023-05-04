@@ -53,19 +53,11 @@ This executable will automatically compile your solution package, source the env
 The workspace is composed of multiple packages:<br><br>
 **iot_project**<br>
   &emsp; Wraps all the other packages together and exposes one launch file to launch the whole simulation<br>
-<<<<<<< Updated upstream
-**iot_project_tester**<br>
-  &emsp; Responsable of keeping track of drones and target positions and update simulation values correctly<br>
-**iot_project_grader**<br>
-  &emsp; Used to visualize the current score, by reading values outputted by the tester<br>
-**iot_project_target_animator**<br>
-=======
 **iot_project_manager**<br>
   &emsp; Responsable of keeping track of drones and target positions and update simulation values correctly<br>
 **iot_project_grader**<br>
   &emsp; Used to visualize the current score, by reading values outputted by the tester<br>
 **iot_project_animator**<br>
->>>>>>> Stashed changes
   &emsp; C++ package currently used only to change color of the spheres in the simulation<br>
 **iot_project_interfaces**<br>
   &emsp; Stores all the interfaces used in this workspace<br>
@@ -121,11 +113,6 @@ Your solution should go in:
 /src/iot_project_solution_src
 /src/iot_project_solution_interfaces
 ```
-<<<<<<< Updated upstream
-The package already includes some files set for you.<br>
-Note that files outside of this package won't be considered for your submission.
-=======
->>>>>>> Stashed changes
 
 Note that files outside of these packages won't be considered for your submission.<br><br>
 
@@ -137,4 +124,3 @@ A baseline solution which schedule a random patrolling, with not-so-good movemen
 You are free to create and spawn new nodes within your package if you see fit for your solution, but editing the already given ones is encouraged.<br><br>
 
 ### Good luck!
-
