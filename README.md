@@ -12,7 +12,7 @@ If a drone does not patrol a target in the given threshold time, the target is c
 
 You are given a simulation configuration, with a variable number of drones, targets, targets' positions and their threshold times.<br>
 The simulation additionally gives you the weight of each metric presented in class.<br>
-Refer to this file if you have missed that: FILE_URL.<br><br>
+Refer to this file if you have missed that: <a href="https://fede3751.github.io/IoT_lectures/misc_files/project_description.pdf">project_description.pdf</a>.<br><br>
 
 Your solution will have to provide a patrolling algorithm which takes into account the weights of each performance metric. All these metric will be considered with respect to their weight to compute a final evaluation.
 
