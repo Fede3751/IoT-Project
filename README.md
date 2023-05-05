@@ -38,6 +38,12 @@ Just clone this repoistory:
 git clone https://github.com/Fede3751/IoT-Project.git
 ```
 
+Additionally, for the grader to work, you may need to manually install the <a href="https://github.com/hoffstadt/DearPyGui">DearPyGui</a> library, which is not found by rosdep by default:
+```
+pip install dearpygui
+```
+
+
 Build the workspace
 
 ```
