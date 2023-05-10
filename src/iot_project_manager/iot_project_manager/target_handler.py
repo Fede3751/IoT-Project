@@ -3,6 +3,7 @@ import time
 
 import rclpy
 from rclpy.node import Node
+from iot_project_interfaces.msg import TargetsTimeLeft
 from iot_project_interfaces.srv import TaskAssignment
 from iot_project_interfaces.srv import ColorTarget
 
@@ -52,11 +53,11 @@ class TargetHandler(Node):
         )
 
 
-        # self.targets_publisher = self.create_publisher(
-        #     None,
-        #     'task_assigner/targets_time_left',
-        #     10
-        # )
+        self.targets_time_publisher = self.create_publisher(
+            TargetsTimeLeft,
+            'task_assigner/targets_time_left',
+            10
+        )
 
         self.time_subscriber = self.create_subscription(
             Clock,
@@ -82,6 +83,8 @@ class TargetHandler(Node):
 
         
         self.get_logger().info("Target handler started. Task can be retrieved from service /task_assigner/get_task")
+
+        self.create_timer(0.1, self.publish_targets_time)
 
         Thread(target=self.start_tester).start()
 
@@ -132,6 +135,18 @@ class TargetHandler(Node):
 
     def store_time_callback(self, msg : Clock):
         self.clock = msg.clock.sec * 10**9 + msg.clock.nanosec
+
+
+    def publish_targets_time(self):
+
+        targets_time_left = TargetsTimeLeft()
+
+        for target in self.targets:
+            targets_time_left.times.append(target["expiration_time"] * 10 ** 9 - (self.clock - target["last_visit"]))
+
+        self.targets_time_publisher.publish(targets_time_left)
+
+
 
 
     def announce_task(self, request : TaskAssignment.Request, response : TaskAssignment.Response):
