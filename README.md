@@ -61,6 +61,12 @@ And then start the simulation
 ./start
 ```
 
+If you want to load a custom simulation file, you can just add it to the arguments of the <code>start</code> executable:
+
+```
+./start ./sim_files/your_simulation.sim
+```
+
 This executable will automatically compile your solution package, source the environment, and launch the simulation.<br><br>
 
 ## Package Organization
