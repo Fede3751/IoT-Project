@@ -1,5 +1,5 @@
 # simulation name can be defined like this
-simulation_name:
+simulation_name:Unfair Simulation
 
 # specifies the number of drones in the simulation
 no_drones:2
