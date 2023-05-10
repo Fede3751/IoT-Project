@@ -39,7 +39,7 @@
           </mesh>
         </geometry>
       </visual>
-      <enable_wind>false</enable_wind>
+      <enable_wind>true</enable_wind>
     </link>
     <link name='X3/rotor_0'>
       <pose>0.13 -0.22 0.023 -0 -0 -0</pose>
@@ -90,7 +90,7 @@
       </visual>
       <gravity>true</gravity>
       <velocity_decay/>
-      <enable_wind>false</enable_wind>
+      <enable_wind>true</enable_wind>
     </link>
     <joint name='X3/rotor_0_joint' type='revolute'>
       <child>X3/rotor_0</child>
@@ -163,7 +163,7 @@
       </visual>
       <gravity>true</gravity>
       <velocity_decay/>
-      <enable_wind>false</enable_wind>
+      <enable_wind>true</enable_wind>
     </link>
     <joint name='X3/rotor_1_joint' type='revolute'>
       <child>X3/rotor_1</child>
@@ -236,7 +236,7 @@
       </visual>
       <gravity>true</gravity>
       <velocity_decay/>
-      <enable_wind>false</enable_wind>
+      <enable_wind>true</enable_wind>
     </link>
     <joint name='X3/rotor_2_joint' type='revolute'>
       <child>X3/rotor_2</child>
@@ -309,7 +309,7 @@
       </visual>
       <gravity>true</gravity>
       <velocity_decay/>
-      <enable_wind>false</enable_wind>
+      <enable_wind>true</enable_wind>
     </link>
     <joint name='X3/rotor_3_joint' type='revolute'>
       <child>X3/rotor_3</child>

@@ -10,6 +10,5 @@ float64                 fairness_weight
 int64                   simulation_time
 
 geometry_msgs/Vector3   wind_vector
-float64                 wind_strength
 
 float64[]               last_visits

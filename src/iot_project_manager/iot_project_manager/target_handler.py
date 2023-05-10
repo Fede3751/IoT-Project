@@ -147,7 +147,6 @@ class TargetHandler(Node):
 
         wv = self.sim_config.wind_vector
         response.wind_vector = Vector3(x=wv[0], y=wv[1], z=wv[2])
-        response.wind_strength = self.sim_config.wind_strength
 
         response.target_positions   = [target['position'] for target in self.targets]
         response.last_visits        = [target['last_visit'] for target in self.targets]

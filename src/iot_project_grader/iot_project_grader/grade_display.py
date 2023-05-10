@@ -45,6 +45,7 @@ class GradeDisplay(Node):
         self.last_visits = []
         self.expiration_times = []
         self.timer_tag = "timer"
+        self.metrics_tag = "metrics"
         self.score_tag = "score"
         self.display_thread = None
 
@@ -116,7 +117,7 @@ class GradeDisplay(Node):
         WINDOW_WIDTH = (ENTRY_WIDTH + 10)*len(self.target_tags) - 5
         WINDOW_PADDING = 17
         WINDOW_WIDTH_INNER = WINDOW_WIDTH - WINDOW_PADDING
-        WINDOW_HEIGHT = 584
+        WINDOW_HEIGHT = 616
 
 
         dpg.create_context()
@@ -145,13 +146,13 @@ class GradeDisplay(Node):
                                 dpg.set_axis_ticks(dpg.last_item(), (("0",0), ("", 0.5), ("1",1)))
                                 dpg.add_line_series([0], [0], tag=self.aoi_tags[i])
                                 dpg.add_line_series([0, self.simulation_time], [self.expiration_times[i]/self.simulation_time]*2)
-
-                                
+                              
 
 
             dpg.add_button(label = "Weights", width = WINDOW_WIDTH_INNER, tag="weights")                            
                     
-            dpg.add_button(tag=self.timer_tag, label = "TIMER", width = WINDOW_WIDTH_INNER, height = 90)
+            dpg.add_button(tag=self.timer_tag, label = "TIMER", width = WINDOW_WIDTH_INNER, height = 60)
+            dpg.add_button(tag=self.metrics_tag, label = "METRICS", width = WINDOW_WIDTH_INNER, height = 60)
             dpg.add_button(tag=self.score_tag, label = "SCORE", width = WINDOW_WIDTH_INNER, height = 90)
 
 
@@ -160,12 +161,14 @@ class GradeDisplay(Node):
         clock_float = 0.0
         aoi_score = 0.0
         violation_malus = 0.0
+        total_score = 0.0
+
         while dpg.is_dearpygui_running():
 
 
-            score_weight = 0
+            step_size = 0
             if clock_float < self.simulation_time:
-                score_weight = self.clock / 10** 9 - clock_float
+                step_size = self.clock / 10** 9 - clock_float
             clock_float = self.clock / 10**9
 
             time_left = max(0, self.simulation_time - clock_float)
@@ -175,6 +178,7 @@ class GradeDisplay(Node):
             dpg.configure_item("weights", label="Weights - AoI: %.2f   Violation: %.2f   Fairness: %.2f" % (self.aoi_weight, self.violation_weight, self.fairness_weight))
                 
 
+            evaluated_fariness = 1
 
             for t in range(len(self.last_visits)):
 
@@ -185,15 +189,25 @@ class GradeDisplay(Node):
 
                 target_time_left = max(0, self.expiration_times[t] - (clock_float - target_time_float))
 
-                score_step = ((clock_float - target_time_float) / self.simulation_time)
-                aoi_score += score_step * score_weight
+                aoi_step = ((clock_float - target_time_float) / self.simulation_time)
+                aoi_score += aoi_step * step_size
                 
                 if target_time_left <= 0:
                     violation_step = (clock_float - target_time_float - self.expiration_times[t]) / self.simulation_time
-                    violation_malus += violation_step * score_weight
+                    violation_malus += violation_step * step_size
 
                 aoi_value_x = clock_float
                 aoi_value_y = (clock_float - target_time_float) / self.simulation_time
+
+                normalized_threshold = self.expiration_times[t] / self.simulation_time
+
+
+                
+                total_score_aoi_contribution = max(0, (1 - aoi_step) - (1 - normalized_threshold))
+                total_score_violation_contribution = (1 - aoi_step) - total_score_aoi_contribution
+                
+
+                total_score += (total_score_aoi_contribution * self.aoi_weight + total_score_violation_contribution * self.violation_weight) * step_size
 
                 self.aoi_x_values[t].append(aoi_value_x)
                 self.aoi_y_values[t].append(aoi_value_y)
@@ -205,7 +219,6 @@ class GradeDisplay(Node):
                 
 
 
-            evaluated_fariness = 1
             aoi_values = []
 
             for a in range(len(self.aoi_tags)):
@@ -215,14 +228,17 @@ class GradeDisplay(Node):
             #print(max(aoi_values), min(aoi_values))
             evaluated_fariness = 1 - ((max(aoi_values) - min(aoi_values)))
 
-            fair_score = aoi_score * evaluated_fariness
             
 
-            dpg.configure_item(self.score_tag, label="Cumulative AoI: \t\t\t %.2f\nCumulative Violation:\t\t%.2f\nEvaluated Fairness: \t\t %.2f" % (fair_score, violation_malus, evaluated_fariness))
+            dpg.configure_item(self.metrics_tag, label="Cumulative AoI: \t\t\t %.2f\nCumulative Violation:\t\t%.2f\nEvaluated Fairness: \t\t %.2f" % (aoi_score, violation_malus, evaluated_fariness))
+
+            score_with_fairness = total_score * (1 + evaluated_fariness * self.fairness_weight)
+
+            dpg.configure_item(self.score_tag, label="SCORE: %.2f" % score_with_fairness)
          
 
             dpg.render_dearpygui_frame()
-            time.sleep(0.1)
+            time.sleep(0.05)
 
 
         dpg.destroy_context()

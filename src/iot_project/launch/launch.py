@@ -33,6 +33,9 @@ def generate_launch_description():
     
     if not simulation_config:
         return LaunchDescription([])
+    
+    wind_velocity_string = f"{simulation_config.wind_vector[0]} {simulation_config.wind_vector[1]} {simulation_config.wind_vector[2]}"
+    sim_utils.edit_sdf_and_save(simulation_config.world_file, f"{simulation_config.world_file}_instance", ['linear_velocity'], [wind_velocity_string])
 
 
     #------------------- Launch Gazebo here, with the iot_project_world world --------------------
@@ -46,7 +49,7 @@ def generate_launch_description():
             ])
             ]),
             launch_arguments={
-            'gz_args' : './gazebo_resources/iot_project_world.sdf'
+            'gz_args' : f"{simulation_config.world_file}_instance"
             }.items()
         )
     ]

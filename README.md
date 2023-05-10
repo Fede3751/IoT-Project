@@ -1,4 +1,4 @@
-# IoT-Project v1.0.1a
+# IoT-Project v1.1.0a
 
 <p align="center">
   <img src="https://fede3751.github.io/IoT_lectures/imgs/project/project_splashart.png">

@@ -1,3 +1,5 @@
+import os
+
 from launch_ros.actions import Node
 
 WORLD_NAME = "iot_project_world"
@@ -8,6 +10,7 @@ class SimulationConfig:
 
     def __init__(self):
         self.simulation_name        = "Default Simulation"
+        self.world_file             = "./gazebo_resources/iot_project_world.sdf"
         self.no_drones              = 3
         self.no_targets             = 0
         self.target_positions       = []
@@ -17,7 +20,6 @@ class SimulationConfig:
         self.violation_weight       = 1.0
         self.simulation_time        = 120
         self.wind_vector            = (0.0,0.0,0.0)
-        self.wind_strength          = 0.0
 
     # Set function, Automatically converts strings given in input
     # to the appropriate variable type
@@ -25,7 +27,7 @@ class SimulationConfig:
 
         if (attr in ["no_drones", "simulation_time"] and isinstance(attr_value, str)):
             attr_value = int(attr_value)
-        if attr in ["aoi_weight", "violation_weight", "fairness_weight", "wind_strength"]:
+        if attr in ["aoi_weight", "violation_weight", "fairness_weight"]:
             attr_value = float(attr_value)
 
         setattr(self, attr, attr_value)
@@ -103,3 +105,47 @@ def spawn_drone(id : int = 0, pos : tuple = (0, 0, 0), world_name : str =  WORLD
                 name='sim'
         )
         
+
+
+# Edits a given sdf by changing the given parameters and save it to a new file.
+# Useful to change some parameters at run-time without messing with calls inside the Gazebo simulation
+def edit_sdf_and_save(input : str, output : str, parameters : list, parameters_value : list):
+    
+    if os.path.exists(output):
+        os.remove(output)
+    
+    with open(input, 'r') as f_in:
+        lines = f_in.readlines()
+
+    output_lines = []
+    set_next_line_to = ''
+    for line in lines:
+
+        line_out = line
+
+        if set_next_line_to:
+            line_out = f"{parameter_value}\n"
+            set_next_line_to = ''
+
+        for param_idx in range(len(parameters)):
+
+            parameter = parameters[param_idx]
+            parameter_value = parameters_value[param_idx]
+
+            if f"<{parameter}>" in line:
+
+                if f"</{parameter}>" not in line:
+                    set_next_line_to = parameter_value
+                
+                elif f"</{parameter}>" in line:
+                    line_out = f"<{parameter}>{parameter_value}</{parameter}>\n"
+
+
+
+            
+        
+        output_lines.append(line_out)
+
+        
+    with open(output, 'w') as f_out:
+        f_out.writelines(output_lines)
