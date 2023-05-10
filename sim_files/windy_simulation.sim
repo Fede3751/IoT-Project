@@ -1,5 +1,5 @@
 # simulation name can be defined like this
-simulation_name:Simple Simulation
+simulation_name:Windy Simulation
 
 # specifies the number of drones in the simulation
 no_drones:3
