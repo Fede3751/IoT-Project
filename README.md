@@ -37,7 +37,7 @@ The score is calculated as follows:
 
 ## Launching the Simulation
 
-Just clone this repoistory:
+Just clone this repository:
 
 ```
 git clone https://github.com/Fede3751/IoT-Project.git
