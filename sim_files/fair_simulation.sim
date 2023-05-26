@@ -20,7 +20,7 @@ aoi_weight:0.5
 violation_weight:1.0
 
 # specifies the fairness' weight
-fairness_weight:4.0
+fairness_weight:1.0
 
 # specifies wind direction and strength
 wind_vector:(0,0,0)
