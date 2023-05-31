@@ -413,7 +413,7 @@
       <attitudeGain>2 3 0.15</attitudeGain>
       <angularRateGain>0.4 0.52 0.18</angularRateGain>
       <maximumLinearAcceleration>2 2 2</maximumLinearAcceleration>
-      <maximumLinearVelocity>1.5 1.5 1.5</maximumLinearVelocity>
+      <maximumLinearVelocity>1 1 1</maximumLinearVelocity>
       <rotorConfiguration>
         <rotor>
           <jointName>X3/rotor_0_joint</jointName>
